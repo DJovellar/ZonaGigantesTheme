@@ -1,8 +1,61 @@
-
- .navbar-extra{
-    background-color: blue;
+@media screen and (min-width: 1200px) {
+    .img-card-principal {
+        max-width: 100%;
+        height: 300px;
+    }
+    .img-card-secondary{
+        max-width: 100%;
+        height: 220px;
+    }
 }
 
-.row-top-margin{
-    margin-top: -20px;
+@media screen and (max-width: 1200px) {
+    .img-card-principal {
+        max-width: 100%;
+        height: 270px;
+    }
+    .img-card-secondary{
+        max-width: 100%;
+        height: 190px;
+    }
 }
+
+@media screen and (max-width: 992px) {
+    .img-card-principal {
+        max-width: 100%;
+        height: 400px;
+    }
+    .img-card-secondary{
+        max-width: 100%;
+        height: 400px;
+    }
+    .img-padding{
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img-card-principal {
+        max-width: 100%;
+        height: 300px;
+    }
+    .img-card-secondary{
+        max-width: 100%;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .img-card-principal {
+        max-width: 100%;
+        height: 250px;
+    }
+    .img-card-secondary{
+        max-width: 100%;
+        height: 250px;
+    }
+}
+
+
+
+
