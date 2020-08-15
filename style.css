@@ -1,3 +1,11 @@
+/*
+Theme Name: Zona Gigantes
+Author: David Jovellar
+Description: Tema desarrollado para la pagina de Zona Gigantes, el podcast en español de los New York Giants.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.0
+*/
+
 @media screen and (min-width: 1200px) {
     .img-card-principal {
         max-width: 100%;
