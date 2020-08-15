@@ -25,14 +25,14 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <?php wp_nav_menu(array(
+            'theme_location' => 'principal',
+            'container' => 'div',
+            'container_class' => 'collapse navbar-collapse',
+            'container_id' => 'navbarNavAltMarkup',
+            'items_wrap' => '<ul class="navbar-nav ml-auto text-center">%3$s</ul>',
+            'menu_class' => 'nav-item'
+          )); ?>
 
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav ml-auto">
-                  <a class="nav-item nav-link mx-3" href="<?php bloginfo('template_url');?>/page.html">NOTICIAS</a>
-                  <a class="nav-item nav-link mx-3" href="#">YOUTUBE</a>
-                  <a class="nav-item nav-link mx-3" href="#">CRÓNICAS</a>
-                  <a class="nav-item nav-link mx-3" href="#">CONTACTO</a>
-              </div>
-          </div>
       </nav>
     </header>
