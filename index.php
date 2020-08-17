@@ -26,6 +26,68 @@
       </div>
     </div>
 
+  <div class="container pt-4 pb-4">
+    <h2>Noticias</h2>
+    <hr>
+    <div class="row no-gutters">
+      <?php 
+      if ( have_posts() ) : 
+          while ( have_posts() ) : the_post(); 
+              // Display post content
+          endwhile; 
+      endif; 
+      ?>
+
+      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6">
+        <div class="card" href="/single.html">
+          <img src="<?php bloginfo('template_url');?>/images/articles-img/daniel_jones.png" class="card-img-top img-card-principal" alt="">
+          <div class="card-img-overlay d-flex flex-column justify-content-end">
+            <h5 class="card-title text-white typography-principal">¿Sera este año la confirmación de DJ como QB franquicia?</h5>
+            <p class="card-text text-white typography-principal"><b> Autor:</b> Ruben Fernandez</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
+        <div class="card">
+          <img src="<?php bloginfo('template_url');?>/images/articles-img/saquon_barkley.png" class="card-img-top img-card-principal" alt="">
+          <div class="card-img-overlay d-flex flex-column justify-content-end">
+            <h5 class="card-title text-white typography-principal">¿Cuanto puede pedir nuestro RB estrella al terminar su contrato Rookie?</h5>
+            <p class="card-text text-white typography-principal"><b>Autor:</b> Pablo Cañibano</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
+        <div class="card">
+          <img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-secondary" alt="">
+          <div class="card-img-overlay d-flex flex-column justify-content-end">
+            <h5 class="card-title text-white typography">Joe Judge, el sargento de hierro</h5>
+            <p class="card-text text-white typography"><b>Autor:</b> Jorge Vico</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
+        <div class="card d-block">
+          <img src="<?php bloginfo('template_url');?>/images/articles-img/jadeveon_clowney.png" class="card-img-top img-card-secondary" alt="">
+          <div class="card-img-overlay d-flex flex-column justify-content-end">
+            <h5 class="card-title text-white typography">¿Merece la pena pagar por Jadeveon Clowney?</h5>
+            <p class="card-text text-white typography"><b>Autor:</b> Alejandro Caviedes</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
+        <div class="card d-flex">
+          <img src="<?php bloginfo('template_url');?>/images/articles-img/darius_slayton.png" class="card-img-top img-card-secondary" alt="">
+          <div class="card-img-overlay d-flex flex-column justify-content-end">
+            <h5 class="card-title text-white typography">¿Repetira Slayton su gran año de Rookie?</h5>
+            <p class="card-text text-white typography"><b>Autor:</b> David Jovellar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container pt-5">
     <div class="row">
       <div class="col-12 col-sm-12 col-mb-6 col-lg-6 col-xl-6">
@@ -111,108 +173,36 @@
     </div>
   </div>
 
-  <div class="container pt-4 pb-4">
-    <h2>Noticias</h2>
-    <hr>
-    <div class="row no-gutters">
-      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6">
-        <div class="card" href="/single.html">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/daniel_jones.png" class="card-img-top img-card-principal" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography-principal">¿Sera este año la confirmación de DJ como QB franquicia?</h5>
-            <p class="card-text text-white typography-principal"><b> Autor:</b> Ruben Fernandez</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
-        <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/saquon_barkley.png" class="card-img-top img-card-principal" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography-principal">¿Cuanto puede pedir nuestro RB estrella al terminar su contrato Rookie?</h5>
-            <p class="card-text text-white typography-principal"><b>Autor:</b> Pablo Cañibano</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row no-gutters">
-      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
-        <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-secondary" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography">Joe Judge, el sargento de hierro</h5>
-            <p class="card-text text-white typography"><b>Autor:</b> Jorge Vico</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
-        <div class="card d-block">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/jadeveon_clowney.png" class="card-img-top img-card-secondary" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography">¿Merece la pena pagar por Jadeveon Clowney?</h5>
-            <p class="card-text text-white typography"><b>Autor:</b> Alejandro Caviedes</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
-        <div class="card d-flex">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/darius_slayton.png" class="card-img-top img-card-secondary" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography">¿Repetira Slayton su gran año de Rookie?</h5>
-            <p class="card-text text-white typography"><b>Autor:</b> David Jovellar</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="container pt-4 pb-1">
     <h2>Cronicas</h2>
     <hr>
     <div class="row no-gutters">
-      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6">
+      <div class="col-12 com-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/daniel_jones.png" class="card-img-top img-card-principal" alt="">
+          <img src="<?php bloginfo('template_url');?>/images/cronicas-img/giants-steelers.png" class="card-img-top img-card-cronica" alt="">
           <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography-principal">¿Sera este año la confirmación de DJ como QB franquicia?</h5>
+            <h5 class="card-title text-white typography-principal">Week 1: New York Giants vs Pittsburgh Steelers</h5>
             <p class="card-text text-white typography-principal"><b> Autor:</b> Ruben Fernandez</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
-        <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/saquon_barkley.png" class="card-img-top img-card-principal" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography-principal">¿Cuanto puede pedir nuestro RB estrella al terminar su contrato Rookie?</h5>
-            <p class="card-text text-white typography-principal"><b>Autor:</b> Pablo Cañibano</p>
           </div>
         </div>
       </div>
     </div>
     <div class="row no-gutters">
-      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
         <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-secondary" alt="">
+          <img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-principal" alt="">
           <div class="card-img-overlay d-flex flex-column justify-content-end">
             <h5 class="card-title text-white typography">Joe Judge, el sargento de hierro</h5>
             <p class="card-text text-white typography"><b>Autor:</b> Jorge Vico</p>
           </div>
         </div>
       </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
         <div class="card d-block">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/jadeveon_clowney.png" class="card-img-top img-card-secondary" alt="">
+          <img src="<?php bloginfo('template_url');?>/images/articles-img/jadeveon_clowney.png" class="card-img-top img-card-principal" alt="">
           <div class="card-img-overlay d-flex flex-column justify-content-end">
             <h5 class="card-title text-white typography">¿Merece la pena pagar por Jadeveon Clowney?</h5>
             <p class="card-text text-white typography"><b>Autor:</b> Alejandro Caviedes</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
-        <div class="card d-flex">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/darius_slayton.png" class="card-img-top img-card-secondary" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography">¿Repetira Slayton su gran año de Rookie?</h5>
-            <p class="card-text text-white typography"><b>Autor:</b> David Jovellar</p>
           </div>
         </div>
       </div>

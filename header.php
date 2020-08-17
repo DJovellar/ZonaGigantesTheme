@@ -11,28 +11,30 @@
 
     <!-- Style -->
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/style.css?ver=<?php echo rand(111,999)?>">
 
     <title>Zona Gigantes</title>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark container" style="background-color: blue;">
-          <a class="navbar-brand px-4" href="<?php bloginfo('template_url');?>/index.html">
-              <img src="<?php bloginfo('template_url');?>/images/other-icons/logo.png" width="50" height="50" class="img-fluid" alt="Icono Zona Gigantes" loading="lazy">
-          </a>
-          <a class="navbar-brand" href="/index.html">Zona Gigantes</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <?php wp_nav_menu(array(
-            'theme_location' => 'principal',
-            'container' => 'div',
-            'container_class' => 'collapse navbar-collapse',
-            'container_id' => 'navbarNavAltMarkup',
-            'items_wrap' => '<ul class="navbar-nav ml-auto text-center">%3$s</ul>',
-            'menu_class' => 'nav-item'
-          )); ?>
-
-      </nav>
+      <div class="pt-4"></div>
+      <div class="container-fluid" style="background-color: blue;">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand px-4" href="<?php bloginfo('template_url');?>/index.html">
+                <img src="<?php bloginfo('template_url');?>/images/other-icons/logo.png" width="50" height="50" class="img-fluid" alt="Icono Zona Gigantes" loading="lazy">
+            </a>
+            <a class="navbar-brand" href="/index.html">Zona Gigantes</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <?php wp_nav_menu(array(
+              'theme_location' => 'principal',
+              'container' => 'div',
+              'container_class' => 'collapse navbar-collapse',
+              'container_id' => 'navbarNavAltMarkup',
+              'items_wrap' => '<ul class="navbar-nav ml-auto text-center">%3$s</ul>',
+              'menu_class' => 'nav-item'
+            )); ?>
+        </nav>
+      </div>
     </header>
