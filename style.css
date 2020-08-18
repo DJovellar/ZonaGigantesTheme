@@ -15,9 +15,13 @@ Version: 1.0
         max-width: 100%;
         height: 220px;
     }
-    .img-card-cronica{
+    .img-card-cronica-principal{
         max-width: 100%;
-        height: 400px;
+        height: 450px;
+    }
+    .img-card-cronica-secondary{
+        max-width: 100%;
+        height: 280px;
     }
 }
 
@@ -30,9 +34,13 @@ Version: 1.0
         max-width: 100%;
         height: 190px;
     }
-    .img-card-cronica{
+    .img-card-cronica-principal{
         max-width: 100%;
-        height: 400px;
+        height: 450px;
+    }
+    .img-card-cronica-secondary{
+        max-width: 100%;
+        height: 280px;
     }
 }
 
@@ -48,7 +56,11 @@ Version: 1.0
     .img-padding{
         padding-top: 3px;
     }
-    .img-card-cronica{
+    .img-card-cronica-principal{
+        max-width: 100%;
+        height: 350px;
+    }
+    .img-card-cronica-secondary{
         max-width: 100%;
         height: 350px;
     }
@@ -63,7 +75,11 @@ Version: 1.0
         max-width: 100%;
         height: 300px;
     }
-    .img-card-cronica{
+    .img-card-cronica-principal{
+        max-width: 100%;
+        height: 300px;
+    }
+    .img-card-cronica-secondary{
         max-width: 100%;
         height: 300px;
     }
@@ -78,7 +94,11 @@ Version: 1.0
         max-width: 100%;
         height: 250px;
     }
-    .img-card-cronica{
+    .img-card-cronica-principal{
+        max-width: 100%;
+        height: 250px;
+    }
+    .img-card-cronica-secondary{
         max-width: 100%;
         height: 250px;
     }

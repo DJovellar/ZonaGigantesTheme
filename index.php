@@ -179,7 +179,7 @@
     <div class="row no-gutters">
       <div class="col-12 com-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/cronicas-img/giants-steelers.png" class="card-img-top img-card-cronica" alt="">
+          <img src="<?php bloginfo('template_url');?>/images/cronicas-img/giants-steelers.png" class="card-img-top img-card-cronica-principal" alt="">
           <div class="card-img-overlay d-flex flex-column justify-content-end">
             <h5 class="card-title text-white typography-principal">Week 1: New York Giants vs Pittsburgh Steelers</h5>
             <p class="card-text text-white typography-principal"><b> Autor:</b> Ruben Fernandez</p>
@@ -190,7 +190,7 @@
     <div class="row no-gutters">
       <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
         <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-principal" alt="">
+          <img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-cronica-secondary" alt="">
           <div class="card-img-overlay d-flex flex-column justify-content-end">
             <h5 class="card-title text-white typography">Joe Judge, el sargento de hierro</h5>
             <p class="card-text text-white typography"><b>Autor:</b> Jorge Vico</p>
@@ -199,7 +199,7 @@
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
         <div class="card d-block">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/jadeveon_clowney.png" class="card-img-top img-card-principal" alt="">
+          <img src="<?php bloginfo('template_url');?>/images/articles-img/jadeveon_clowney.png" class="card-img-top img-card-cronica-secondary" alt="">
           <div class="card-img-overlay d-flex flex-column justify-content-end">
             <h5 class="card-title text-white typography">¿Merece la pena pagar por Jadeveon Clowney?</h5>
             <p class="card-text text-white typography"><b>Autor:</b> Alejandro Caviedes</p>
