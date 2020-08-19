@@ -31,60 +31,40 @@
     <hr>
     <div class="row no-gutters">
       <?php 
-      if ( have_posts() ) : 
-          while ( have_posts() ) : the_post(); 
-              // Display post content
-          endwhile; 
-      endif; 
-      ?>
-
-      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6">
-        <div class="card" href="/single.html">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/daniel_jones.png" class="card-img-top img-card-principal" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography-principal">¿Sera este año la confirmación de DJ como QB franquicia?</h5>
-            <p class="card-text text-white typography-principal"><b> Autor:</b> Ruben Fernandez</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
-        <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/saquon_barkley.png" class="card-img-top img-card-principal" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography-principal">¿Cuanto puede pedir nuestro RB estrella al terminar su contrato Rookie?</h5>
-            <p class="card-text text-white typography-principal"><b>Autor:</b> Pablo Cañibano</p>
-          </div>
-        </div>
-      </div>
+        $posts = new WP_Query(array(
+          'cat' => '3',
+          'posts_per_page' => 2,
+        ));
+        if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
+            <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6">
+              <div class="card">
+                <a href="<?php the_permalink(); ?>" class="stretched-link"><img src="<?php bloginfo('template_url');?>/images/articles-img/daniel_jones.png" class="card-img-top img-card-principal" alt=""></a>
+                <div class="card-img-overlay d-flex flex-column justify-content-end">
+                  <h5 class="card-title text-white typography-principal"><?php the_title(); ?></h5>
+                  <p class="card-text text-white typography-principal"><b> Autor:</b> <?php the_author(); ?></p>
+                </div>
+              </div>
+            </div>
+      <?php endwhile; endif; ?>
     </div>
     <div class="row no-gutters">
-      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
-        <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-secondary" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography">Joe Judge, el sargento de hierro</h5>
-            <p class="card-text text-white typography"><b>Autor:</b> Jorge Vico</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
-        <div class="card d-block">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/jadeveon_clowney.png" class="card-img-top img-card-secondary" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography">¿Merece la pena pagar por Jadeveon Clowney?</h5>
-            <p class="card-text text-white typography"><b>Autor:</b> Alejandro Caviedes</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
-        <div class="card d-flex">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/darius_slayton.png" class="card-img-top img-card-secondary" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography">¿Repetira Slayton su gran año de Rookie?</h5>
-            <p class="card-text text-white typography"><b>Autor:</b> David Jovellar</p>
-          </div>
-        </div>
-      </div>
+      <?php 
+          $posts = new WP_Query(array(
+            'cat' => '3',
+            'posts_per_page' => 3,
+            'offset' => 2,
+          ));
+          if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
+              <div class="card">
+                <a href="<?php the_permalink(); ?>" class="stretched-link"><img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-secondary" alt=""></a>
+                <div class="card-img-overlay d-flex flex-column justify-content-end">
+                  <h5 class="card-title text-white typography"><?php the_title(); ?></h5>
+                  <p class="card-text text-white typography"><b>Autor:</b> <?php the_author(); ?> </p>
+                </div>
+              </div>
+            </div>
+        <?php endwhile; endif; ?>
     </div>
   </div>
 
@@ -177,35 +157,41 @@
     <h2>Cronicas</h2>
     <hr>
     <div class="row no-gutters">
-      <div class="col-12 com-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/cronicas-img/giants-steelers.png" class="card-img-top img-card-cronica-principal" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography-principal">Week 1: New York Giants vs Pittsburgh Steelers</h5>
-            <p class="card-text text-white typography-principal"><b> Autor:</b> Ruben Fernandez</p>
+      <?php 
+        $posts = new WP_Query(array(
+          'cat' => '4',
+          'posts_per_page' => 1,
+        ));
+        if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
+          <div class="col-12 com-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="card">
+              <a href="<?php the_permalink(); ?>" class="stretched-link"><img src="<?php bloginfo('template_url');?>/images/cronicas-img/giants-steelers.png" class="card-img-top img-card-cronica-principal" alt=""></a>
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <h5 class="card-title text-white typography-principal"><?php the_title(); ?></h5>
+                <p class="card-text text-white typography-principal"><b>Autor:</b> <?php the_author(); ?></p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        <?php endwhile; endif; ?>
     </div>
     <div class="row no-gutters">
-      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
-        <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-cronica-secondary" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography">Joe Judge, el sargento de hierro</h5>
-            <p class="card-text text-white typography"><b>Autor:</b> Jorge Vico</p>
+      <?php 
+        $posts = new WP_Query(array(
+          'cat' => '4',
+          'posts_per_page' => 2,
+          'offset' => 1,
+        ));
+        if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
+            <div class="card">
+              <a href="<?php the_permalink(); ?>" class="stretched-link"><img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-cronica-secondary" alt=""></a>
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <h5 class="card-title text-white typography"><?php the_title(); ?></h5>
+                <p class="card-text text-white typography"><b>Autor:</b> <?php the_author(); ?></p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
-        <div class="card d-block">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/jadeveon_clowney.png" class="card-img-top img-card-cronica-secondary" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography">¿Merece la pena pagar por Jadeveon Clowney?</h5>
-            <p class="card-text text-white typography"><b>Autor:</b> Alejandro Caviedes</p>
-          </div>
-        </div>
-      </div>
+        <?php endwhile; endif; ?>
     </div>
   </div>
 
