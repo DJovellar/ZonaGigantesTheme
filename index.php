@@ -200,50 +200,25 @@
     <hr>
     <div class="row no-gutters">
       <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6">
-        <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/daniel_jones.png" class="card-img-top img-card-principal" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography-principal">¿Sera este año la confirmación de DJ como QB franquicia?</h5>
-            <p class="card-text text-white typography-principal"><b> Autor:</b> Ruben Fernandez</p>
-          </div>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.youtube.com/embed/piGa8U2JlgM" class="embed-responsive-item" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
-        <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/saquon_barkley.png" class="card-img-top img-card-principal" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography-principal">¿Cuanto puede pedir nuestro RB estrella al terminar su contrato Rookie?</h5>
-            <p class="card-text text-white typography-principal"><b>Autor:</b> Pablo Cañibano</p>
-          </div>
+      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding pl-1">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.youtube.com/embed/8O2sGAyw40M" class="embed-responsive-item" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-    <div class="row no-gutters">
-      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
-        <div class="card">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-secondary" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography">Joe Judge, el sargento de hierro</h5>
-            <p class="card-text text-white typography"><b>Autor:</b> Jorge Vico</p>
-          </div>
+    <div class="row no-gutters pt-1">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.youtube.com/embed/6Xaar4hRpSU" class="embed-responsive-item" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
-        <div class="card d-block">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/jadeveon_clowney.png" class="card-img-top img-card-secondary" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography">¿Merece la pena pagar por Jadeveon Clowney?</h5>
-            <p class="card-text text-white typography"><b>Autor:</b> Alejandro Caviedes</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
-        <div class="card d-flex">
-          <img src="<?php bloginfo('template_url');?>/images/articles-img/darius_slayton.png" class="card-img-top img-card-secondary" alt="">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h5 class="card-title text-white typography">¿Repetira Slayton su gran año de Rookie?</h5>
-            <p class="card-text text-white typography"><b>Autor:</b> David Jovellar</p>
-          </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding pl-1">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.youtube.com/embed/WapOmFYI3VI" class="embed-responsive-item" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
