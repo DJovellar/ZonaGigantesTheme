@@ -6,6 +6,11 @@ Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-me
 Version: 1.0
 */
 
+.padding-videos{
+    padding-top: 2px;
+}
+
+
 @media screen and (min-width: 1200px) {
     .img-card-principal {
         max-width: 100%;

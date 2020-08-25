@@ -55,7 +55,7 @@
             'offset' => 2,
           ));
           if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-padding">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
               <div class="card">
                 <a href="<?php the_permalink(); ?>" class="stretched-link"><img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-secondary" alt=""></a>
                 <div class="card-img-overlay d-flex flex-column justify-content-end">
@@ -68,7 +68,7 @@
     </div>
   </div>
 
-  <div class="container pt-5">
+  <div class="container pt-4">
     <div class="row">
       <div class="col-12 col-sm-12 col-mb-6 col-lg-6 col-xl-6">
         <h5 class="text-center">NFC East</h5>
@@ -153,7 +153,7 @@
     </div>
   </div>
 
-  <div class="container pt-4 pb-1">
+  <div class="container pt-4">
     <h2>Cronicas</h2>
     <hr>
     <div class="row no-gutters">
@@ -182,7 +182,7 @@
           'offset' => 1,
         ));
         if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
-          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
             <div class="card">
               <a href="<?php the_permalink(); ?>" class="stretched-link"><img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-cronica-secondary" alt=""></a>
               <div class="card-img-overlay d-flex flex-column justify-content-end">
@@ -198,29 +198,34 @@
   <div class="container pt-4">
     <h2>Videos</h2>
     <hr>
-    <div class="row no-gutters">
-      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe src="https://www.youtube.com/embed/piGa8U2JlgM" class="embed-responsive-item" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding pl-1">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe src="https://www.youtube.com/embed/8O2sGAyw40M" class="embed-responsive-item" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
     <div class="row no-gutters pt-1">
-      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe src="https://www.youtube.com/embed/6Xaar4hRpSU" class="embed-responsive-item" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-padding pl-1">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe src="https://www.youtube.com/embed/WapOmFYI3VI" class="embed-responsive-item" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
+      <?php 
+        $posts = new WP_Query(array(
+          'cat' => '5',
+          'posts_per_page' => 2,
+        ));
+        if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
+          <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 pl-1 padding-videos" >
+            <div class="embed-responsive embed-responsive-16by9">
+              <?php the_content() ?>
+            </div>
+          </div>
+        <?php endwhile; endif; ?>
+    </div>
+    <div class="row no-gutters">
+      <?php 
+        $posts = new WP_Query(array(
+          'cat' => '5',
+          'posts_per_page' => 2,
+          'offset' => 2,
+        ));
+        if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
+          <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 pl-1 padding-videos">
+            <div class="embed-responsive embed-responsive-16by9">
+              <?php the_content() ?>
+            </div>
+          </div>
+        <?php endwhile; endif; ?>
     </div>
   </div>
 
