@@ -38,7 +38,9 @@
         if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
             <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6">
               <div class="card">
-                <a href="<?php the_permalink(); ?>" class="stretched-link"><img src="<?php bloginfo('template_url');?>/images/articles-img/daniel_jones.png" class="card-img-top img-card-principal" alt=""></a>
+                <a href="<?php the_permalink(); ?>" class="stretched-link">
+                  <?php if (has_post_thumbnail()) the_post_thumbnail('post-thumbnails', array( 'class' => 'card-img-top img-card-principal' )) ?>
+                </a>
                 <div class="card-img-overlay d-flex flex-column justify-content-end">
                   <h5 class="card-title text-white typography-principal"><?php the_title(); ?></h5>
                   <p class="card-text text-white typography-principal"><b> Autor:</b> <?php the_author(); ?></p>
@@ -57,7 +59,9 @@
           if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
             <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
               <div class="card">
-                <a href="<?php the_permalink(); ?>" class="stretched-link"><img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-secondary" alt=""></a>
+              <a href="<?php the_permalink(); ?>" class="stretched-link">
+                  <?php if (has_post_thumbnail()) the_post_thumbnail('post-thumbnails', array( 'class' => 'card-img-top img-card-secondary' )) ?>
+                </a>
                 <div class="card-img-overlay d-flex flex-column justify-content-end">
                   <h5 class="card-title text-white typography"><?php the_title(); ?></h5>
                   <p class="card-text text-white typography"><b>Autor:</b> <?php the_author(); ?> </p>
@@ -165,7 +169,9 @@
         if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
           <div class="col-12 com-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="card">
-              <a href="<?php the_permalink(); ?>" class="stretched-link"><img src="<?php bloginfo('template_url');?>/images/cronicas-img/giants-steelers.png" class="card-img-top img-card-cronica-principal" alt=""></a>
+              <a href="<?php the_permalink(); ?>" class="stretched-link">
+                <?php if (has_post_thumbnail()) the_post_thumbnail('post-thumbnails', array( 'class' => 'card-img-top img-card-cronica-principal' )) ?>
+              </a>
               <div class="card-img-overlay d-flex flex-column justify-content-end">
                 <h5 class="card-title text-white typography-principal"><?php the_title(); ?></h5>
                 <p class="card-text text-white typography-principal"><b>Autor:</b> <?php the_author(); ?></p>
@@ -184,7 +190,9 @@
         if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
             <div class="card">
-              <a href="<?php the_permalink(); ?>" class="stretched-link"><img src="<?php bloginfo('template_url');?>/images/articles-img/joe_judge.png" class="card-img-top img-card-cronica-secondary" alt=""></a>
+              <a href="<?php the_permalink(); ?>" class="stretched-link">
+                <?php if (has_post_thumbnail()) the_post_thumbnail('post-thumbnails', array( 'class' => 'card-img-top img-card-cronica-secondary' )) ?>
+              </a>
               <div class="card-img-overlay d-flex flex-column justify-content-end">
                 <h5 class="card-title text-white typography"><?php the_title(); ?></h5>
                 <p class="card-text text-white typography"><b>Autor:</b> <?php the_author(); ?></p>

@@ -13,4 +13,10 @@ function funcion_auxiliar ($atts, $item, $args) {
     return $atts;
 }
 
+// Imagen destacada de la entrada
+if (function_exists('add_theme_support')) {
+    add_theme_support('post-thumbnails');
+}
+
+
 ?>
