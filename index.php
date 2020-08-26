@@ -1,33 +1,8 @@
 
 <?php get_header(); ?>
 
-    <div class="container pt-5">
-      <div class="row">
-        <div class="col-12 col-sm-12 col-lg-6 col-xl-6 text-center"></div>
-        <div class="col-6 col-sm-6 col-lg-3 col-xl-3 text-center">
-          <h6>Puedes encontrarnos en: </h6>
-        </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-          <div class="row">
-            <div class="col-3">
-              <a href="https://twitter.com/zonagigantes" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/icon-twitter.png" width="25" height="20"></img></a>
-            </div>
-            <div class="col-3">
-              <a href="https://www.instagram.com/zonagigantes_/" target="_blank"><img src="<?php bloginfo('template_url');?>/images//other-icons/logo-instagram.png" width="25" height="25"></img></a>
-            </div>
-            <div class="col-3">
-              <a href="https://www.facebook.com/ZonaGigantes1/" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/icon-facebook.png" width="25" height="25"></img></a>
-            </div>
-            <div class="col-3">
-              <a href="https://www.youtube.com/channel/UC9MUffNRPYDd3S2JlVXpBlw" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/youtube-icon.png" width="30" height="30"></img></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   <div class="container pt-4 pb-4">
-    <h2>Noticias</h2>
+    <h2>Últimas noticias</h2>
     <hr>
     <div class="row no-gutters">
       <?php 
@@ -158,7 +133,7 @@
   </div>
 
   <div class="container pt-4">
-    <h2>Cronicas</h2>
+    <h2>Últimas crónicas</h2>
     <hr>
     <div class="row no-gutters">
       <?php 
@@ -204,7 +179,7 @@
   </div>
 
   <div class="container pt-4">
-    <h2>Videos</h2>
+    <h2>Últimos videos</h2>
     <hr>
     <div class="row no-gutters pt-1">
       <?php 
