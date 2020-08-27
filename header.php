@@ -20,7 +20,7 @@
       <div class="pt-4"></div>
       <div class="container-fluid" style="background-color: blue;">
         <nav class="navbar navbar-expand-lg navbar-dark container">
-            <a class="navbar-brand px-4" href="<?php echo esc_url(home_url('/')) ?>">
+            <a class="navbar-brand px-3" href="<?php echo esc_url(home_url('/')) ?>">
                 <img src="<?php bloginfo('template_url');?>/images/other-icons/logo.png" width="50" height="50" class="img-fluid" alt="Icono Zona Gigantes" loading="lazy">
             </a>
             <a class="navbar-brand" href="<?php echo esc_url(home_url('/')) ?>">Zona Gigantes</a>

@@ -16,6 +16,11 @@
             <div class="col-12 col-sm-12 col-md-8 col-xl-8 d-flex flex-column justify-content-center">
                 <h4 class="text-justify"> <?php the_title() ?> </h4>
                 <p class="text-justify"> <?php the_excerpt() ?> </p>
+                <div class="row">
+                    <div class="col-12 text-right">
+                        <a href="<?php the_permalink() ?>"><button class="btn btn-primary btn-sm" >Leer mas</button></a> 
+                    </div>
+                </div>
             </div>
         </div>
         <hr>
