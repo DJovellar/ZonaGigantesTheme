@@ -55,11 +55,11 @@
         <table class="table table-borderless">
           <thead class="thead-dark">
             <tr>
-              <th scope="col" style="padding-left: 70px;">Equipo</th>
-              <th scope="col" class="text-center">W</th>
-              <th scope="col" class="text-center">L</th>
-              <th scope="col" class="text-center">Tie</th>
-              <th scope="col" class="text-center">%</th>
+              <th scope="col" class="color-giants" style="padding-left: 70px; background-color: #00035F;">Equipo</th>
+              <th scope="col" class="text-center" style="background-color: #00035F;">W</th>
+              <th scope="col" class="text-center" style="background-color: #00035F;">L</th>
+              <th scope="col" class="text-center" style="background-color: #00035F;">Tie</th>
+              <th scope="col" class="text-center" style="background-color: #00035F;">%</th>
             </tr>
           </thead>
           <tbody>
@@ -100,9 +100,9 @@
         <table class="table table-borderless">
           <thead class="thead-dark">
             <tr>
-              <th scope="col" style="padding-left: 70px;">Rival</th>
-              <th scope="col" class="text-center">Resultado</th>
-              <th scope="col" class="text-center">Fecha</th>
+              <th scope="col" style="padding-left: 70px; background-color: #00035F;">Rival</th>
+              <th scope="col" class="text-center" style="background-color: #00035F;">Resultado</th>
+              <th scope="col" class="text-center" style="background-color: #00035F;">Fecha</th>
             </tr>
           </thead>
           <tbody>

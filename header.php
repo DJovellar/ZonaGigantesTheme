@@ -17,14 +17,15 @@
   </head>
   <body>
     <header>
-      <div class="pt-4"></div>
-      <div class="container-fluid" style="background-color: blue;">
-        <nav class="navbar navbar-expand-lg navbar-dark container">
-            <a class="navbar-brand px-3" href="<?php echo esc_url(home_url('/')) ?>">
-                <img src="<?php bloginfo('template_url');?>/images/other-icons/logo.png" width="50" height="50" class="img-fluid" alt="Icono Zona Gigantes" loading="lazy">
+      <div class="pt-5"></div>
+      <div class="container-fluid color-giants">
+        <nav class="navbar navbar-expand-lg navbar-dark container position-relative">
+            <a class="navbar-brand position-absolute" href="<?php echo esc_url(home_url('/')) ?>">
+              <img src="<?php bloginfo('template_url');?>/images/other-icons/logo-zonaGigantes.png" width="140" height="140" class="img-fluid" alt="Icono Zona Gigantes" loading="lazy">
+              <span class="navbar-brand pl-3 hide-name">Zona Gigantes</span> 
             </a>
-            <a class="navbar-brand" href="<?php echo esc_url(home_url('/')) ?>">Zona Gigantes</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <div class=""></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <?php wp_nav_menu(array(
@@ -32,7 +33,7 @@
               'container' => 'div',
               'container_class' => 'collapse navbar-collapse',
               'container_id' => 'navbarNavAltMarkup',
-              'items_wrap' => '<ul class="navbar-nav ml-auto text-center">%3$s</ul>',
+              'items_wrap' => '<ul class="navbar-nav ml-auto move-items-menu">%3$s</ul>',
               'menu_class' => 'nav-item'
             )); ?>
         </nav>
