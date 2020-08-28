@@ -65,29 +65,29 @@
           <tbody>
             <tr >
               <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/giants-icon.png" class="img-fluid" alt="Icono New York Giants" width="25" height="25"> Giants</td>
-              <td class="text-center">5</td>
-              <td class="text-center">1</td>
               <td class="text-center">0</td>
-              <td class="text-center">.826</td>
+              <td class="text-center">0</td>
+              <td class="text-center">0</td>
+              <td class="text-center">.000</td>
             </tr>
             <tr>
               <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid" alt="Icono Dallas Cowboys" width="25" height="25"> Cowboys</td>
-              <td class="text-center">4</td>
-              <td class="text-center">2</td>
               <td class="text-center">0</td>
-              <td class="text-center">.671</td>
+              <td class="text-center">0</td>
+              <td class="text-center">0</td>
+              <td class="text-center">.000</td>
             </tr>
             <tr>
               <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon.png" class="img-fluid" alt="Icono Washington Football Team" width="25" height="25"> Redskins</td>
-              <td class="text-center">3</td>
-              <td class="text-center">3</td>
               <td class="text-center">0</td>
-              <td class="text-center">.500</td>
+              <td class="text-center">0</td>
+              <td class="text-center">0</td>
+              <td class="text-center">.000</td>
             </tr>
             <tr>
               <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/eagles-icon.png" class="img-fluid" alt="Icono Philadelphia Eagles" width="25" height="25"> Eagles</td>
               <td class="text-center">0</td>
-              <td class="text-center">6</td>
+              <td class="text-center">0</td>
               <td class="text-center">0</td>
               <td class="text-center">.000</td>
             </tr>

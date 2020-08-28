@@ -17,7 +17,9 @@
   </head>
   <body>
     <header>
-      <div class="pt-5"></div>
+      <div class="pt-4 pb-1 container">
+          <span class="container text-logo">Giants en español</span>
+      </div>
       <div class="container-fluid color-giants">
         <nav class="navbar navbar-expand-lg navbar-dark container position-relative">
             <a class="navbar-brand position-absolute" href="<?php echo esc_url(home_url('/')) ?>">
