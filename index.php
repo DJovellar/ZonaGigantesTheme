@@ -17,8 +17,8 @@
                   <?php if (has_post_thumbnail()) the_post_thumbnail('post-thumbnails', array( 'class' => 'card-img-top img-card-principal' )) ?>
                 </a>
                 <div class="card-img-overlay d-flex flex-column justify-content-end">
-                  <h5 class="card-title text-white typography-principal"><?php the_title(); ?></h5>
-                  <p class="card-text text-white typography-principal"><b> Autor:</b> <?php the_author(); ?>. <?php echo get_the_date() ?> </p>
+                  <h5 class="card-title text-white"><?php the_title(); ?></h5>
+                  <p class="card-text text-white"><b> Autor:</b> <?php the_author(); ?>. <?php echo get_the_date() ?> </p>
                 </div>
               </div>
             </div>
@@ -38,8 +38,8 @@
                   <?php if (has_post_thumbnail()) the_post_thumbnail('post-thumbnails', array( 'class' => 'card-img-top img-card-secondary' )) ?>
                 </a>
                 <div class="card-img-overlay d-flex flex-column justify-content-end">
-                  <h5 class="card-title text-white typography"><?php the_title(); ?></h5>
-                  <p class="card-text text-white typography"><b>Autor:</b> <?php the_author(); ?>. <?php echo get_the_date() ?> </p>
+                  <h5 class="card-title text-white"><?php the_title(); ?></h5>
+                  <p class="card-text text-white"><b>Autor:</b> <?php the_author(); ?>. <?php echo get_the_date() ?> </p>
                 </div>
               </div>
             </div>
@@ -148,8 +148,8 @@
                 <?php if (has_post_thumbnail()) the_post_thumbnail('post-thumbnails', array( 'class' => 'card-img-top img-card-cronica-principal' )) ?>
               </a>
               <div class="card-img-overlay d-flex flex-column justify-content-end">
-                <h5 class="card-title text-white typography-principal"><?php the_title(); ?></h5>
-                <p class="card-text text-white typography-principal"><b>Autor:</b> <?php the_author(); ?>. <?php echo get_the_date() ?></p>
+                <h5 class="card-title text-white"><?php the_title(); ?></h5>
+                <p class="card-text text-white"><b>Autor:</b> <?php the_author(); ?>. <?php echo get_the_date() ?></p>
               </div>
             </div>
           </div>
@@ -169,8 +169,8 @@
                 <?php if (has_post_thumbnail()) the_post_thumbnail('post-thumbnails', array( 'class' => 'card-img-top img-card-cronica-secondary' )) ?>
               </a>
               <div class="card-img-overlay d-flex flex-column justify-content-end">
-                <h5 class="card-title text-white typography"><?php the_title(); ?></h5>
-                <p class="card-text text-white typography"><b>Autor:</b> <?php the_author(); ?>. <?php echo get_the_date() ?></p>
+                <h5 class="card-title text-white"><?php the_title(); ?></h5>
+                <p class="card-text text-white"><b>Autor:</b> <?php the_author(); ?>. <?php echo get_the_date() ?></p>
               </div>
             </div>
           </div>
