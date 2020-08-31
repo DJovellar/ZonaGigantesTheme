@@ -6,6 +6,18 @@ Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-me
 Version: 1.0
 */
 
+body{
+    font-family: 'Russo One', sans-serif;
+}
+
+.custom-label{
+    width: 100px;
+}
+
+textarea{
+    width: 100%;
+}
+
 .padding-videos{
     padding-top: 2px;
 }
