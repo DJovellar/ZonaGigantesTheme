@@ -17,7 +17,7 @@
   </head>
   <body>
     <header>
-      <div class="pt-4 pb-1 container">
+      <div class="pb-1 container">
           <span class="container text-logo">Giants en español</span>
       </div>
       <div class="container-fluid color-giants">

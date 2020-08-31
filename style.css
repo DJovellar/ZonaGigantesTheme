@@ -108,6 +108,9 @@ textarea{
         font-style: oblique;
         font-size: 1.1rem;
     }
+    .hide-name{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {

@@ -1,4 +1,5 @@
 
+<?php wp_head() ?>
 <?php get_header(); ?>
 
   <div class="container pt-4 pb-4">

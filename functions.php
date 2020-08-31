@@ -1,8 +1,14 @@
 <?php
-// Creamos el menu
 
+function add_script() {
+  wp_enqueue_script( 'app-js', get_template_directory_uri() . '/js/app.js', array('jquery') , false);
+}
+
+add_action( 'wp_enqueue_scripts', 'add_script');
+
+// Creamos el menu
 if (function_exists('register_nav_menus')) {
-    register_nav_menus(array('principal' => 'Menu Principal'));
+  register_nav_menus(array('principal' => 'Menu Principal'));
 }
 
 // Clase para <a>
@@ -28,9 +34,9 @@ function special_nav_class ($classes, $item) {
 }
 
 function wpb_add_google_fonts() {
-   wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Russo+One&display=swap', false );
-   }
+  wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Russo+One&display=swap', false );
+}
    
-add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts');
 
 ?>
