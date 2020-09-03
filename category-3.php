@@ -13,10 +13,14 @@
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 d-flex flex-column justify-content-center">
                 <h4> <?php the_title() ?> </h4>
-                <p> <?php the_excerpt() ?> </p>
+                
+                <div class="font-text">
+                    <p><?php the_excerpt() ?></p>
+                </div>
                 <div class="row">
-                    <div class="col-12 text-right">
-                        <a href="<?php the_permalink() ?>"><button class="btn btn-primary btn-sm" >Leer mas</button></a> 
+                    <div class="col-12 font-text">
+                        Por <b><?php the_author(); ?></b>
+                        <span style="float: right"><a href="<?php the_permalink() ?>"><button class="btn btn-primary btn-sm" >Leer mas</button></a> </span>
                     </div>
                 </div>
             </div>

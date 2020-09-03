@@ -6,7 +6,23 @@ Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-me
 Version: 1.0
 */
 
-body{
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Russo One', sans-serif; 
+}
+
+.font-text{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.custom-shadow{
+    text-shadow:    
+        0.04em 0 black,
+        0 0.04em black,
+        -0.04em 0 black,
+        0 -0.04em black;;
+}
+
+.font-title{
     font-family: 'Russo One', sans-serif;
 }
 
@@ -30,6 +46,12 @@ textarea{
     padding-left: 13%;
     font-style: oblique;
     font-size: 1.2rem;
+}
+
+.btn-reply{
+    padding: 1px 5px;
+    background-color: #00035F;
+    color: white;
 }
 
 @media screen and (min-width: 1200px) {

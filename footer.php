@@ -1,4 +1,4 @@
-    <div class="pt-1"></div>
+    <div class="pt-3"></div>
 
     <footer class="container color-giants">
         <p class="text-white text-center" style="font-size: 1rem;">&copy; 2020 Zona Gigantes. Todos los derechos reservados</p>

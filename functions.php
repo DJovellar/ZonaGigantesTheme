@@ -1,11 +1,5 @@
 <?php
 
-function add_script() {
-  wp_enqueue_script( 'app-js', get_template_directory_uri() . '/js/app.js', array('jquery') , false);
-}
-
-add_action( 'wp_enqueue_scripts', 'add_script');
-
 // Creamos el menu
 if (function_exists('register_nav_menus')) {
   register_nav_menus(array('principal' => 'Menu Principal'));
@@ -28,7 +22,7 @@ add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 
 function special_nav_class ($classes, $item) {
   if (in_array('current-menu-item', $classes) ){
-    $classes[] = 'active ';
+    $classes[] = 'active';
   }
   return $classes;
 }
@@ -36,7 +30,14 @@ function special_nav_class ($classes, $item) {
 function wpb_add_google_fonts() {
   wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Russo+One&display=swap', false );
 }
-   
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts');
+
+function time_ago( $type = 'post' ) {
+  $d = 'comment' == $type ? 'get_comment_time' : 'get_post_time';
+
+  return human_time_diff($d('U'), current_time('timestamp')) . " " . __('ago');
+
+}
+
 
 ?>
