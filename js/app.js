@@ -1,9 +1,18 @@
 
-// 'Estilo comentarios
-const botonComentarios = document.querySelector('.comments-container');
+// Estilo comentarios
+const commentSubmit = document.getElementById('submit');
+if (commentSubmit) {
+    commentSubmit.className = 'btn color-giants text-white';
+}
 
-const comentarios = document.getElementById('comments-container');
+const commentTextArea = document.getElementById('comment');
+if (commentTextArea) {
+    commentTextArea.className = 'form-control';
+}
 
-console.log(botonComentarios);
-
-console.log(comentarios);
+const responseButton = document.querySelectorAll('.comment-reply-link');
+if (responseButton) {
+    responseButton.forEach(element => {
+        element.className = 'btn btn-reply text-white'; 
+    });
+}
