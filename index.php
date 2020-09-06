@@ -79,13 +79,6 @@
           </thead>
           <tbody class="font-text">
             <tr >
-              <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/giants-icon.png" class="img-fluid" alt="Icono New York Giants" width="25" height="25"> <span class="pl-2">Giants</span></td>
-              <td class="text-center">0</td>
-              <td class="text-center">0</td>
-              <td class="text-center">0</td>
-              <td class="text-center">.000</td>
-            </tr>
-            <tr>
               <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid" alt="Icono Dallas Cowboys" width="25" height="25"> <span class="pl-2">Cowboys </span></td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
@@ -93,7 +86,7 @@
               <td class="text-center">.000</td>
             </tr>
             <tr>
-              <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon.png" class="img-fluid" alt="Icono Washington Football Team" width="25" height="25"> <span class="pl-2">Redskins </span></td>
+              <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/giants-icon.png" class="img-fluid" alt="Icono New York Giants" width="25" height="25"> <span class="pl-2">Giants</span></td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
@@ -101,6 +94,13 @@
             </tr>
             <tr>
               <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/eagles-icon.png" class="img-fluid" alt="Icono Philadelphia Eagles" width="25" height="25"> <span class="pl-2">Eagles </span></td>
+              <td class="text-center">0</td>
+              <td class="text-center">0</td>
+              <td class="text-center">0</td>
+              <td class="text-center">.000</td>
+            </tr>
+            <tr>
+              <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon.png" class="img-fluid" alt="Icono Washington Football Team" width="25" height="25"> <span class="pl-2">Washington </span></td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
