@@ -55,6 +55,11 @@ textarea{
     color: white;
 }
 
+.footer-social{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+}
+
 @media screen and (min-width: 1200px) {
     .img-card-principal {
         max-width: 100%;
