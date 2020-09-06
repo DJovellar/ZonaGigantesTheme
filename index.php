@@ -23,7 +23,7 @@
                     </p>
                 </div>
                 <div class="card-img-overlay d-flex flex-column justify-content-end custom-shadow">
-                  <h5 class="card-title text-white"><?php the_title(); ?></h5>
+                  <h4 class="card-title text-white"><?php the_title(); ?></h4>
                   <p class="card-text text-white font-text">
                     Por <b><?php the_author(); ?></b>
                   </p>
@@ -168,7 +168,7 @@
                     </p>
               </div>
               <div class="card-img-overlay d-flex flex-column justify-content-end custom-shadow">
-                <h5 class="card-title text-white"><?php the_title(); ?></h5>
+                <h3 class="card-title text-white"><?php the_title(); ?></h3>
                   <p class="card-text text-white font-text">
                     Por <b><?php the_author(); ?></b>
                   </p>
@@ -196,7 +196,7 @@
                     </p>
               </div>
               <div class="card-img-overlay d-flex flex-column justify-content-end custom-shadow">
-                <h5 class="card-title text-white"><?php the_title(); ?></h5>
+                <h4 class="card-title text-white"><?php the_title(); ?></h4>
                 <p class="card-text text-white font-text">
                   Por <b><?php the_author(); ?></b>
                 </p>
