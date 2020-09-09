@@ -1,19 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- Style -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/style.css?ver=<?php echo rand(111,999)?>">
 
-    <title>Zona Gigantes</title>
+    <!-- Icono en el navegador -->
+    <link rel="icon" href="<?php bloginfo('template_url');?>/images/other-icons/favicon.ico" />
+
+    <title> Zona Gigantes </title>
   </head>
   <body>
     <header class="font-title">
