@@ -1,36 +1,143 @@
+/*
+Theme Name: Zona Gigantes
+Author: David Jovellar
+Description: Tema desarrollado para la pagina de Zona Gigantes, el podcast en español de los New York Giants.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.0
+*/
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Russo One', sans-serif; 
+}
+
+.font-text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+}
+
+.custom-shadow{
+    text-shadow:    
+        0.04em 0 black,
+        0 0.04em black,
+        -0.04em 0 black,
+        0 -0.04em black;;
+}
+
+.font-title{
+    font-family: 'Russo One', sans-serif;
+}
+
+.custom-label{
+    width: 100px;
+}
+
+textarea{
+    width: 100%;
+}
+
+.padding-videos{
+    padding-top: 2px;
+}
+
+.color-giants{
+    background-color: #00035F;
+}
+
+.text-logo{
+    padding-left: 13%;
+    font-style: oblique;
+    font-size: 1.2rem;
+}
+
+.btn-reply{
+    padding: 1px 5px;
+    background-color: #00035F;
+    color: white;
+}
+
+.footer-social{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+}
+
 @media screen and (min-width: 1200px) {
     .img-card-principal {
         max-width: 100%;
-        height: 300px;
+        height: 330px;
     }
     .img-card-secondary{
         max-width: 100%;
         height: 220px;
+    }
+    .img-card-cronica-principal{
+        max-width: 100%;
+        height: 450px;
+    }
+    .img-card-cronica-secondary{
+        max-width: 100%;
+        height: 280px;
+    }
+    .text-logo{
+        padding-left: 13%;
+        font-style: oblique;
+        font-size: 1.2rem;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .img-card-principal {
         max-width: 100%;
-        height: 270px;
+        height: 290px;
     }
     .img-card-secondary{
         max-width: 100%;
         height: 190px;
+    }
+    .img-card-cronica-principal{
+        max-width: 100%;
+        height: 450px;
+    }
+    .img-card-cronica-secondary{
+        max-width: 100%;
+        height: 280px;
+    }
+    .text-logo{
+        padding-left: 15%;
+        font-style: oblique;
+        font-size: 1.1rem;
     }
 }
 
 @media screen and (max-width: 992px) {
     .img-card-principal {
         max-width: 100%;
-        height: 400px;
+        height: 350px;
     }
     .img-card-secondary{
         max-width: 100%;
-        height: 400px;
+        height: 350px;
     }
     .img-padding{
         padding-top: 3px;
+    }
+    .img-card-cronica-principal{
+        max-width: 100%;
+        height: 350px;
+    }
+    .img-card-cronica-secondary{
+        max-width: 100%;
+        height: 350px;
+    }
+    .move-items-menu{
+        text-align: center;
+    }
+    .text-logo{
+        padding-left: 20%;
+        font-style: oblique;
+        font-size: 1.1rem;
+    }
+    .hide-name{
+        display: none;
     }
 }
 
@@ -43,6 +150,22 @@
         max-width: 100%;
         height: 300px;
     }
+    .img-card-cronica-principal{
+        max-width: 100%;
+        height: 300px;
+    }
+    .img-card-cronica-secondary{
+        max-width: 100%;
+        height: 300px;
+    }
+    .hide-name{
+        display: none;
+    }
+    .text-logo{
+        padding-left: 27%;
+        font-style: oblique;
+        font-size: 1.1rem;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -53,6 +176,25 @@
     .img-card-secondary{
         max-width: 100%;
         height: 250px;
+    }
+    .img-card-cronica-principal{
+        max-width: 100%;
+        height: 250px;
+    }
+    .img-card-cronica-secondary{
+        max-width: 100%;
+        height: 250px;
+    }
+    .hide-name{
+        display: none;
+    }
+    .move-items-menu{
+        padding-left: 30%;
+    }
+    .text-logo{
+        padding-left: 40%;
+        font-style: oblique;
+        font-size: 1.1rem;
     }
 }
 
