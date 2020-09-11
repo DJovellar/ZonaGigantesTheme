@@ -77,7 +77,7 @@
               <th scope="col" class="text-center" style="background-color: #00035F;">%</th>
             </tr>
           </thead>
-          <tbody class="font-text">
+          <tbody class="font-text font-size-min">
             <tr>
               <td class=""><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid table-row-custom" alt="Icono Dallas Cowboys" width="25" height="25"> <span class="pl-1">Cowboys </span></td>
               <td class="text-center">0</td>
@@ -120,7 +120,7 @@
               <th scope="col" class="text-center" style="background-color: #00035F;">Fecha</th>
             </tr>
           </thead>
-          <tbody class="font-text">
+          <tbody class="font-text font-size-min">
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/steelers-icon.png" class="img-fluid table-row-custom" alt="Icono Pittsburgh Steelers" width="25" height="25"> <span class="pl-1">Steelers </span></td>
               <td class="text-center">*</td>
