@@ -60,6 +60,7 @@ textarea{
     font-size: 1.3rem;
 }
 
+
 @media screen and (min-width: 1200px) {
     .img-card-principal {
         max-width: 100%;
@@ -81,6 +82,9 @@ textarea{
         padding-left: 13%;
         font-style: oblique;
         font-size: 1.2rem;
+    }
+    .table-row-custom{
+        margin-left: 24%;
     }
 }
 
@@ -105,6 +109,9 @@ textarea{
         padding-left: 15%;
         font-style: oblique;
         font-size: 1.1rem;
+    }
+    .table-row-custom{
+        margin-left: 19%;
     }
 }
 
@@ -139,6 +146,9 @@ textarea{
     .hide-name{
         display: none;
     }
+    .table-row-custom{
+        margin-left: 30%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -166,6 +176,9 @@ textarea{
         font-style: oblique;
         font-size: 1.1rem;
     }
+    .table-row-custom{
+        margin-left: 21%;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -192,11 +205,23 @@ textarea{
         padding-left: 30%;
     }
     .text-logo{
-        padding-left: 40%;
+        padding-left: 44%;
         font-style: oblique;
         font-size: 1.1rem;
     }
+    .table-row-custom{
+        margin-left: 5%;
+    }
 }
+
+@media screen and (max-width: 380px) {
+    .table-row-custom{
+        margin-left: 0%;
+    }
+}
+
+
+
 
 
 
