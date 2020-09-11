@@ -100,7 +100,7 @@
               <td class="text-center">.000</td>
             </tr>
             <tr>
-              <td ><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon.png" class="img-fluid table-row-custom" alt="Icono Washington Football Team" width="25" height="25"> <span class="pl-1">Washington </span></td>
+              <td ><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon.png" class="img-fluid table-row-custom" alt="Icono Washington Football Team" width="22" height="22"> <span class="pl-1">Washington </span></td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
@@ -127,17 +127,17 @@
               <td class="text-center">15/09 01:15</td>
             </tr>
             <tr>
-              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/bears-icon.png" class="img-fluid table-row-custom" alt="Icono Pittsburgh Steelers" width="25" height="25"> <span class="pl-1">Bears</span></td>
+              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/bears-icon.png" class="img-fluid table-row-custom" alt="Icono Chicago Bears" width="25" height="25"> <span class="pl-1">Bears</span></td>
               <td class="text-center">*</td>
               <td class="text-center">20/09 19:00</td>
             </tr>
             <tr>
-              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/49ers-icon.png" class="img-fluid table-row-custom" alt="Icono Pittsburgh Steelers" width="25" height="25"> <span class="pl-1">49ers </span></td>
+              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/49ers-icon.png" class="img-fluid table-row-custom" alt="Icono San Francisco 49ers" width="25" height="25"> <span class="pl-1">49ers </span></td>
               <td class="text-center">*</td>
               <td class="text-center">27/09 19:00</td>
             </tr>
             <tr>
-              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/rams-icon.png" class="img-fluid table-row-custom" alt="Icono Pittsburgh Steelers" width="25" height="25"> <span class="pl-1">Rams </span></td>
+              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/rams-icon.png" class="img-fluid table-row-custom" alt="Icono Los Angeles Rams" width="25" height="25"> <span class="pl-1">Rams </span></td>
               <td class="text-center">*</td>
               <td class="text-center">04/10 22:05</td>
             </tr>
