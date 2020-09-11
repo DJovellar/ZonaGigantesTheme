@@ -168,11 +168,11 @@
             </div>
             <hr>
 
-            <div class="row pt-2">
-                <div class="col-12 col-sm-5 col-md-4 col-lg-2 col-xl-2 pl-4 pl-sm-5 pl-md-5 pl-lg-4 pl-xl-4 pt-3 pt-sm-0 pt-md-0 pt-lg-0 pt-xl-0">
-                    <img src="<?php bloginfo('template_url');?>/images/icon-teams/giants-icon.png" class="img-fluid" alt="Miembo Zona Gigantes" width="100" height="100">
+            <div class="row">
+                <div class="col-sm-5 col-md-4 col-lg-2 col-xl-2 pl-4 pl-sm-5 pl-md-5 pl-lg-4 pl-xl-4 pt-3 pt-sm- pt-md-5 pt-lg-5 pt-xl-4">
+                    <img src="<?php bloginfo('template_url');?>/images/profile-img/ferran.png" class="img-fluid" alt="Miembro Zona Gigantes - Ferran" width="150" height="150"></img>
                 </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-10 col-xl-10 pt-3 pt-sm-0 pt-md-0 pt-lg-0 pt-xl-0 pl-4 pl-sm-0 pl-md-0 pl-lg-0 pl-xl-0">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-10 col-xl-10 pt-0 pt-sm-0 pt-md-0 pt-lg-0 pt-xl-0 pl-4 pl-sm-0 pl-md-0 pl-lg-0 pl-xl-0">
                     <div class="row pt-4">
                         <div class="col-12">
                             <h5>

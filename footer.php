@@ -7,13 +7,13 @@
 
     <footer class="container-fluid color-giants pt-4 text-white">
         <div class="container">
-            <div class="row pl-5">
-                <div class="col-lg-4 col-xl-4 pl-md-5 pl-4 pt-4 logo-footer">
+            <div class="row">
+                <div class="col-lg-4 col-xl-4 pt-4 text-center">
                     <img src="<?php bloginfo('template_url');?>/images/other-icons/logo-zonaGigantes.png" width="180" height="180" alt="Icono Zona Gigantes" loading="lazy">
                     <span class="navbar-brand pl-3 font-title pt-2">Zona Gigantes</span>
                 </div>
-                <div class="col-lg-4 col-xl-3 pl-5 pt-4 pt-sm-3 pt-md-3">
-                    <h4 class="text-center">Siguenos</h4>
+                <div class="col-lg-4 col-xl-4 pl-4 pt-4 pt-sm-3 pt-md-3 text-center">
+                    <h4>Siguenos</h4>
                     <ul class="list-group footer-social">
                         <a href="https://twitter.com/zonagigantes" target="_blank" class="pt-1 text-decoration-none text-black-50">
                             <li class="list-group-item py-1">
@@ -41,7 +41,7 @@
                         </a>
                     </ul> 
                 </div>
-                <div class="col-lg-4 col-xl-5 pl-lg-5 pl-xl-5 pt-4 pt-sm-4 pt-md-4 pt-lg-3 pt-xl-3">
+                <div class="col-lg-4 col-xl-4 pl-lg-5 pl-xl-5 pt-4 pt-sm-4 pt-md-4 pt-lg-3 pt-xl-3">
                     <h4 class="text-center">Secciones</h4>
                     <ul class="list-unstyled footer-social">
                         <li class="text-center" style="padding: 10px;"><a href="<?php echo esc_url( get_category_link('3') ); ?>" class="text-decoration-none text-white">Noticias</a></li>

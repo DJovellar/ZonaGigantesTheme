@@ -68,39 +68,39 @@
         <h5 class="text-center">NFC East</h5>
         <hr>
         <table class="table table-borderless">
-          <thead class="thead-dark font-title">
+          <thead class="thead-dark font-title text-center">
             <tr>
-              <th scope="col" style="padding-left: 70px; background-color: #00035F;">Equipo</th>
+              <th scope="col" style="background-color: #00035F;">Equipo</th>
               <th scope="col" class="text-center" style="background-color: #00035F;">W</th>
               <th scope="col" class="text-center" style="background-color: #00035F;">L</th>
               <th scope="col" class="text-center" style="background-color: #00035F;">Tie</th>
               <th scope="col" class="text-center" style="background-color: #00035F;">%</th>
             </tr>
           </thead>
-          <tbody class="font-text">
-            <tr >
-              <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid" alt="Icono Dallas Cowboys" width="25" height="25"> <span class="pl-2">Cowboys </span></td>
+          <tbody class="font-text font-size-min">
+            <tr>
+              <td class=""><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid table-row-custom" alt="Icono Dallas Cowboys" width="25" height="25"> <span class="pl-1">Cowboys </span></td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
               <td class="text-center">.000</td>
             </tr>
             <tr>
-              <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/giants-icon.png" class="img-fluid" alt="Icono New York Giants" width="25" height="25"> <span class="pl-2">Giants</span></td>
+              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/giants-icon.png" class="img-fluid table-row-custom" alt="Icono New York Giants" width="25" height="25"> <span class="pl-1">Giants</span></td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
               <td class="text-center">.000</td>
             </tr>
             <tr>
-              <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/eagles-icon.png" class="img-fluid" alt="Icono Philadelphia Eagles" width="25" height="25"> <span class="pl-2">Eagles </span></td>
+              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/eagles-icon.png" class="img-fluid table-row-custom" alt="Icono Philadelphia Eagles" width="25" height="25"> <span class="pl-1">Eagles </span></td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
               <td class="text-center">.000</td>
             </tr>
             <tr>
-              <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon.png" class="img-fluid" alt="Icono Washington Football Team" width="25" height="25"> <span class="pl-2">Washington </span></td>
+              <td ><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon2.png" class="img-fluid table-row-custom" alt="Icono Washington Football Team" width="22" height="22"> <span class="pl-1">Washington </span></td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
@@ -113,31 +113,31 @@
         <h5 class="text-center">Proximos partidos</h5>
         <hr>
         <table class="table table-borderless">
-          <thead class="thead-dark font-title">
+          <thead class="thead-dark font-title text-center">
             <tr>
-              <th scope="col" style="padding-left: 70px; background-color: #00035F;">Rival</th>
+              <th scope="col" style="background-color: #00035F;">Rival</th>
               <th scope="col" class="text-center" style="background-color: #00035F;">Resultado</th>
               <th scope="col" class="text-center" style="background-color: #00035F;">Fecha</th>
             </tr>
           </thead>
-          <tbody class="font-text">
+          <tbody class="font-text font-size-min">
             <tr>
-              <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/steelers-icon.png" class="img-fluid" alt="Icono Pittsburgh Steelers" width="25" height="25"> <span class="pl-2">Steelers </span></td>
+              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/steelers-icon.png" class="img-fluid table-row-custom" alt="Icono Pittsburgh Steelers" width="25" height="25"> <span class="pl-1">Steelers </span></td>
               <td class="text-center">*</td>
               <td class="text-center">15/09 01:15</td>
             </tr>
             <tr>
-              <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/bears-icon.png" class="img-fluid" alt="Icono Pittsburgh Steelers" width="25" height="25"> <span class="pl-2">Bears</span></td>
+              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/bears-icon.png" class="img-fluid table-row-custom" alt="Icono Chicago Bears" width="25" height="25"> <span class="pl-1">Bears</span></td>
               <td class="text-center">*</td>
               <td class="text-center">20/09 19:00</td>
             </tr>
             <tr>
-              <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/49ers-icon.png" class="img-fluid" alt="Icono Pittsburgh Steelers" width="25" height="25"> <span class="pl-2">49ers </span></td>
+              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/49ers-icon.png" class="img-fluid table-row-custom" alt="Icono San Francisco 49ers" width="25" height="25"> <span class="pl-1">49ers </span></td>
               <td class="text-center">*</td>
               <td class="text-center">27/09 19:00</td>
             </tr>
             <tr>
-              <td class="pl-5"><img src="<?php bloginfo('template_url');?>/images/icon-teams/rams-icon.png" class="img-fluid" alt="Icono Pittsburgh Steelers" width="25" height="25"> <span class="pl-2">Rams </span></td>
+              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/rams-icon.png" class="img-fluid table-row-custom" alt="Icono Los Angeles Rams" width="25" height="25"> <span class="pl-1">Rams </span></td>
               <td class="text-center">*</td>
               <td class="text-center">04/10 22:05</td>
             </tr>
@@ -168,7 +168,7 @@
                     </p>
               </div>
               <div class="card-img-overlay d-flex flex-column justify-content-end custom-shadow">
-                <h3 class="card-title text-white"><?php the_title(); ?></h3>
+                <h4 class="card-title text-white"><?php the_title(); ?></h4>
                   <p class="card-text text-white font-text">
                     Por <b><?php the_author(); ?></b>
                   </p>
