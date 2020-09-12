@@ -46,16 +46,6 @@
                 <div class="font-text pt-1">
                     <?php comment_text() ?>
                 </div>
-
-                <div>
-                    <?php comment_reply_link( array_merge($args, array(
-                        'add_below' => 'comment',
-                        'reply_text' => __('Responder', 'textdomain'),
-                        'depth'      => $depth,
-                        'max_depth'  => $args['max_depth']
-                        )
-                    )); ?>
-                </div>
             </div>
         </div>
         <hr>
