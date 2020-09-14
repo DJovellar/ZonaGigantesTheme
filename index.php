@@ -79,11 +79,11 @@
           </thead>
           <tbody class="font-text font-size-min">
             <tr>
-              <td class=""><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid table-row-custom" alt="Icono Dallas Cowboys" width="25" height="25"> <span class="pl-1">Cowboys </span></td>
+              <td ><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon2.png" class="img-fluid table-row-custom" alt="Icono Washington Football Team" width="22" height="22"> <span class="pl-1">Washington </span></td>
+              <td class="text-center">1</td>
               <td class="text-center">0</td>
               <td class="text-center">0</td>
-              <td class="text-center">0</td>
-              <td class="text-center">.000</td>
+              <td class="text-center">1.000</td>
             </tr>
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/giants-icon.png" class="img-fluid table-row-custom" alt="Icono New York Giants" width="25" height="25"> <span class="pl-1">Giants</span></td>
@@ -93,16 +93,16 @@
               <td class="text-center">.000</td>
             </tr>
             <tr>
-              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/eagles-icon.png" class="img-fluid table-row-custom" alt="Icono Philadelphia Eagles" width="25" height="25"> <span class="pl-1">Eagles </span></td>
+              <td class=""><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid table-row-custom" alt="Icono Dallas Cowboys" width="25" height="25"> <span class="pl-1">Cowboys </span></td>
               <td class="text-center">0</td>
-              <td class="text-center">0</td>
+              <td class="text-center">1</td>
               <td class="text-center">0</td>
               <td class="text-center">.000</td>
             </tr>
             <tr>
-              <td ><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon2.png" class="img-fluid table-row-custom" alt="Icono Washington Football Team" width="22" height="22"> <span class="pl-1">Washington </span></td>
+              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/eagles-icon.png" class="img-fluid table-row-custom" alt="Icono Philadelphia Eagles" width="25" height="25"> <span class="pl-1">Eagles </span></td>
               <td class="text-center">0</td>
-              <td class="text-center">0</td>
+              <td class="text-center">1</td>
               <td class="text-center">0</td>
               <td class="text-center">.000</td>
             </tr>

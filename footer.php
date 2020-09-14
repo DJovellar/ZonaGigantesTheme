@@ -24,7 +24,7 @@
                         <a href="https://www.instagram.com/zonagigantes_/" target="_blank" class="pt-2 text-decoration-none text-black-50">
                             <li class="list-group-item py-1">
                                 <img src="<?php bloginfo('template_url');?>/images/other-icons/logo-instagram.png" width="40" height="30"></img>
-                                <span class="pl-3">Instragram</span>
+                                <span class="pl-3">Instagram</span>
                             </li>
                         </a>
                         <a href="https://www.facebook.com/ZonaGigantes1/" target="_blank" class="pt-2 text-decoration-none text-black-50">
