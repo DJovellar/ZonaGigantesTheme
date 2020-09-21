@@ -129,7 +129,7 @@
             </tr>
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/bears-icon.png" class="img-fluid table-row-custom" alt="Icono Chicago Bears" width="25" height="25"> <span class="pl-1">Bears</span></td>
-              <td class="text-center">17-13</td>
+              <td class="text-center">17-13 L</td>
               <td class="text-center">Finalizado</td>
             </tr>
             <tr>
