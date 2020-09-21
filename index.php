@@ -81,28 +81,29 @@
             <tr>
               <td ><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon2.png" class="img-fluid table-row-custom" alt="Icono Washington Football Team" width="22" height="22"> <span class="pl-1">Washington </span></td>
               <td class="text-center">1</td>
+              <td class="text-center">1</td>
               <td class="text-center">0</td>
+              <td class="text-center">.500</td>
+            </tr>
+            <tr>
+              <td class=""><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid table-row-custom" alt="Icono Dallas Cowboys" width="25" height="25"> <span class="pl-1">Cowboys </span></td>
+              <td class="text-center">1</td>
+              <td class="text-center">1</td>
               <td class="text-center">0</td>
-              <td class="text-center">1.000</td>
+              <td class="text-center">.500</td>
             </tr>
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/giants-icon.png" class="img-fluid table-row-custom" alt="Icono New York Giants" width="25" height="25"> <span class="pl-1">Giants</span></td>
               <td class="text-center">0</td>
-              <td class="text-center">0</td>
-              <td class="text-center">0</td>
-              <td class="text-center">.000</td>
-            </tr>
-            <tr>
-              <td class=""><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid table-row-custom" alt="Icono Dallas Cowboys" width="25" height="25"> <span class="pl-1">Cowboys </span></td>
-              <td class="text-center">0</td>
-              <td class="text-center">1</td>
+              <td class="text-center">2</td>
               <td class="text-center">0</td>
               <td class="text-center">.000</td>
             </tr>
+
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/eagles-icon.png" class="img-fluid table-row-custom" alt="Icono Philadelphia Eagles" width="25" height="25"> <span class="pl-1">Eagles </span></td>
               <td class="text-center">0</td>
-              <td class="text-center">1</td>
+              <td class="text-center">2</td>
               <td class="text-center">0</td>
               <td class="text-center">.000</td>
             </tr>
@@ -123,13 +124,13 @@
           <tbody class="font-text font-size-min">
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/steelers-icon.png" class="img-fluid table-row-custom" alt="Icono Pittsburgh Steelers" width="25" height="25"> <span class="pl-1">Steelers </span></td>
-              <td class="text-center">*</td>
-              <td class="text-center">15/09 01:15</td>
+              <td class="text-center">16-26 L</td>
+              <td class="text-center">Finalizado</td>
             </tr>
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/bears-icon.png" class="img-fluid table-row-custom" alt="Icono Chicago Bears" width="25" height="25"> <span class="pl-1">Bears</span></td>
-              <td class="text-center">*</td>
-              <td class="text-center">20/09 19:00</td>
+              <td class="text-center">17-13</td>
+              <td class="text-center">Finalizado</td>
             </tr>
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/49ers-icon.png" class="img-fluid table-row-custom" alt="Icono San Francisco 49ers" width="25" height="25"> <span class="pl-1">49ers </span></td>
