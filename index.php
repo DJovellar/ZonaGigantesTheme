@@ -81,9 +81,9 @@
             <tr>
               <td class=""><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid table-row-custom" alt="Icono Dallas Cowboys" width="25" height="25"> <span class="pl-1">Cowboys </span></td>
               <td class="text-center">2</td>
-              <td class="text-center">3</td>
+              <td class="text-center">4</td>
               <td class="text-center">0</td>
-              <td class="text-center">.400</td>
+              <td class="text-center">.333</td>
             </tr>
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/eagles-icon.png" class="img-fluid table-row-custom" alt="Icono Philadelphia Eagles" width="25" height="25"> <span class="pl-1">Eagles </span></td>
