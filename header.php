@@ -46,10 +46,10 @@
       <div class="container pt-5">
         <div class="row">
           <div class="col-12 col-sm-12 col-lg-6 col-xl-6 text-center"></div>
-          <div class="col-6 col-sm-6 col-lg-3 col-xl-3 text-center">
+          <div class="col-12 col-sm-6 col-lg-3 col-xl-3 text-center">
             <h6>Puedes encontrarnos en: </h6>
           </div>
-          <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 pt-3 pt-sm-0 pt-md-0 pt-lg-0 pt-xl-0">
             <div class="row">
               <div class="col-2">
                 <a href="https://twitter.com/zonagigantes" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/icon-twitter.png" width="25" height="20"></img></a>
@@ -61,10 +61,13 @@
                 <a href="https://www.facebook.com/ZonaGigantes1/" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/icon-facebook.png" width="25" height="25"></img></a>
               </div>
               <div class="col-2">
-                <a href="https://www.youtube.com/channel/UC9MUffNRPYDd3S2JlVXpBlw" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/youtube-icon.png" width="30" height="30"></img></a>
+                <a href="https://www.youtube.com/channel/UC9MUffNRPYDd3S2JlVXpBlw" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/youtube-icon.png" width="32" height="32"></img></a>
               </div>
               <div class="col-2">
-                <a href="https://www.twitch.tv/zonagigantes" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/twitch-icon.png" width="24" height="24" class=""></img></a>
+                <a href="https://www.twitch.tv/zonagigantes" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/twitch-icon.png" width="24" height="24"></img></a>
+              </div>
+              <div class="col-2">
+                <a href="https://t.me/zonagigantes" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/telegram-icon.png" width="28" height="28"></img></a>
               </div>
             </div>
           </div>
