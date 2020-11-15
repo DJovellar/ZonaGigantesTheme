@@ -81,26 +81,26 @@
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/eagles-icon.png" class="img-fluid table-row-custom" alt="Icono Philadelphia Eagles" width="25" height="25"> <span class="pl-1">Eagles </span></td>
               <td class="text-center">3</td>
-              <td class="text-center">4</td>
+              <td class="text-center">5</td>
               <td class="text-center">1</td>
-              <td class="text-center">.438</td>
+              <td class="text-center">.389</td>
+            </tr>
+            <tr>
+              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/giants-icon.png" class="img-fluid table-row-custom" alt="Icono New York Giants" width="25" height="25"> <span class="pl-1">Giants</span></td>
+              <td class="text-center">3</td>
+              <td class="text-center">7</td>
+              <td class="text-center">0</td>
+              <td class="text-center">.300</td>
             </tr>
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon2.png" class="img-fluid table-row-custom" alt="Icono Washington Football Team" width="22" height="22"> <span class="pl-1">Washington </span></td>
               <td class="text-center">2</td>
-              <td class="text-center">6</td>
+              <td class="text-center">7</td>
               <td class="text-center">0</td>
               <td class="text-center">.250</td>
             </tr>
             <tr>
               <td class=""><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid table-row-custom" alt="Icono Dallas Cowboys" width="25" height="25"> <span class="pl-1">Cowboys </span></td>
-              <td class="text-center">2</td>
-              <td class="text-center">7</td>
-              <td class="text-center">0</td>
-              <td class="text-center">.222</td>
-            </tr>
-            <tr>
-              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/giants-icon.png" class="img-fluid table-row-custom" alt="Icono New York Giants" width="25" height="25"> <span class="pl-1">Giants</span></td>
               <td class="text-center">2</td>
               <td class="text-center">7</td>
               <td class="text-center">0</td>
@@ -122,24 +122,24 @@
           </thead>
           <tbody class="font-text font-size-min">
             <tr>
-              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/buccaneers.png" class="img-fluid table-row-custom" alt="Icono Tampa Bay Bucanneers" width="25" height="25"> <span class="pl-1">Buccaneers </span></td>
-              <td class="text-center">23-25 L</td>
-              <td class="text-center">Finalizado</td>
-            </tr>
-            <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon2.png" class="img-fluid table-row-custom" alt="Icono Washington Football Team" width="22" height="22"> <span class="pl-1">Washington </span></td>
               <td class="text-center">20-23 W</td>
               <td class="text-center">Finalizado</td>
             </tr>
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/eagles-icon.png" class="img-fluid table-row-custom" alt="Icono Philadelphia Eagles" width="25" height="25"> <span class="pl-1">Eagles </span></td>
-              <td class="text-center">*</td>
-              <td class="text-center">15/11 19:00</td>
+              <td class="text-center">27-17 W</td>
+              <td class="text-center">Finalizado</td>
             </tr>
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/bengals-icon.png" class="img-fluid table-row-custom" alt="Icono Cincinnati Bengals" width="25" height="25"> <span class="pl-1">Bengals </span></td>
               <td class="text-center">*</td>
               <td class="text-center">29/11 19:00</td>
+            </tr>
+            <tr>
+              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/seahawks-icon.png" class="img-fluid table-row-custom" alt="Icono Seattle Seahawks" width="25" height="25"> <span class="pl-1">Seahawks </span></td>
+              <td class="text-center">*</td>
+              <td class="text-center">06/12 22:05</td>
             </tr>
           </tbody>
         </table>
