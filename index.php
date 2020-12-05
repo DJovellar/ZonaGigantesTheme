@@ -95,9 +95,9 @@
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/eagles-icon.png" class="img-fluid table-row-custom" alt="Icono Philadelphia Eagles" width="25" height="25"> <span class="pl-1">Eagles </span></td>
               <td class="text-center">3</td>
-              <td class="text-center">6</td>
+              <td class="text-center">7</td>
               <td class="text-center">1</td>
-              <td class="text-center">.350</td>
+              <td class="text-center">.318</td>
             </tr>
             <tr>
               <td class=""><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid table-row-custom" alt="Icono Dallas Cowboys" width="25" height="25"> <span class="pl-1">Cowboys </span></td>
