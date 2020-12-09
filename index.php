@@ -87,10 +87,10 @@
             </tr>
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon2.png" class="img-fluid table-row-custom" alt="Icono Washington Football Team" width="22" height="22"> <span class="pl-1">Washington </span></td>
-              <td class="text-center">4</td>
+              <td class="text-center">5</td>
               <td class="text-center">7</td>
               <td class="text-center">0</td>
-              <td class="text-center">.364</td>
+              <td class="text-center">.417</td>
             </tr>
             <tr>
               <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/eagles-icon.png" class="img-fluid table-row-custom" alt="Icono Philadelphia Eagles" width="25" height="25"> <span class="pl-1">Eagles </span></td>
@@ -102,9 +102,9 @@
             <tr>
               <td class=""><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid table-row-custom" alt="Icono Dallas Cowboys" width="25" height="25"> <span class="pl-1">Cowboys </span></td>
               <td class="text-center">3</td>
-              <td class="text-center">8</td>
+              <td class="text-center">9</td>
               <td class="text-center">0</td>
-              <td class="text-center">.273</td>
+              <td class="text-center">.250</td>
             </tr>
           </tbody>
         </table>
@@ -137,9 +137,9 @@
               <td class="text-center">13/12 19:00</td>
             </tr>
             <tr>
-              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/browns-icon.png" class="img-fluid table-row-custom" alt="Icono Cleveland Brows" width="25" height="25"> <span class="pl-1">Bronws </span></td>
+              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/browns-icon.png" class="img-fluid table-row-custom" alt="Icono Cleveland Brows" width="25" height="25"> <span class="pl-1">Browns </span></td>
               <td class="text-center">*</td>
-              <td class="text-center">20/12 19:00</td>
+              <td class="text-center">21/12 02:20</td>
             </tr>
           </tbody>
         </table>
