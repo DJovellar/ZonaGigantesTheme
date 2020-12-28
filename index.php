@@ -62,6 +62,8 @@
     </div>
   </div>
 
+  <?php $standing = get_standing_NFC_East(); ?>
+
   <div class="container pt-4">
     <div class="row">
       <div class="col-12 col-sm-12 col-mb-6 col-lg-6 col-xl-6">
@@ -79,32 +81,44 @@
           </thead>
           <tbody class="font-text font-size-min">
             <tr>
-              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/washington-icon2.png" class="img-fluid table-row-custom" alt="Icono Washington Football Team" width="22" height="22"> <span class="pl-1">Washington </span></td>
-              <td class="text-center">6</td>
-              <td class="text-center">9</td>
-              <td class="text-center">0</td>
-              <td class="text-center">.400</td>
+              <td>
+                <img src="<?php bloginfo('template_url');?>/images/icon-teams/<?php echo $standing[0]->Division ?>" class="img-fluid table-row-custom" alt="" width="22" height="22">
+                <span class="pl-2"><?php echo $standing[0]->Name ?></span>
+              </td>
+              <td class="text-center"><?php echo $standing[0]->Wins ?></td>
+              <td class="text-center"><?php echo $standing[0]->Losses ?></td>
+              <td class="text-center"><?php echo $standing[0]->Ties ?></td>
+              <td class="text-center"><?php echo $standing[0]->Percentage ?></td>
             </tr>
             <tr>
-              <td class=""><img src="<?php bloginfo('template_url');?>/images/icon-teams/cowboys-icon.png" class="img-fluid table-row-custom" alt="Icono Dallas Cowboys" width="25" height="25"> <span class="pl-1">Cowboys </span></td>
-              <td class="text-center">6</td>
-              <td class="text-center">9</td>
-              <td class="text-center">0</td>
-              <td class="text-center">.400</td>
+              <td>
+                <img src="<?php bloginfo('template_url');?>/images/icon-teams/<?php echo $standing[1]->Division ?>" class="img-fluid table-row-custom" alt="" width="22" height="22">
+                <span class="pl-2"><?php echo $standing[1]->Name ?></span>
+              </td>
+              <td class="text-center"><?php echo $standing[1]->Wins ?></td>
+              <td class="text-center"><?php echo $standing[1]->Losses ?></td>
+              <td class="text-center"><?php echo $standing[1]->Ties ?></td>
+              <td class="text-center"><?php echo $standing[1]->Percentage ?></td>
             </tr>
             <tr>
-              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/giants-icon.png" class="img-fluid table-row-custom" alt="Icono New York Giants" width="25" height="25"> <span class="pl-1">Giants</span></td>
-              <td class="text-center">5</td>
-              <td class="text-center">10</td>
-              <td class="text-center">0</td>
-              <td class="text-center">.333</td>
+              <td>
+                <img src="<?php bloginfo('template_url');?>/images/icon-teams/<?php echo $standing[2]->Division ?>" class="img-fluid table-row-custom" alt="" width="22" height="22">
+                <span class="pl-2"><?php echo $standing[2]->Name ?></span>
+              </td>
+              <td class="text-center"><?php echo $standing[2]->Wins ?></td>
+              <td class="text-center"><?php echo $standing[2]->Losses ?></td>
+              <td class="text-center"><?php echo $standing[2]->Ties ?></td>
+              <td class="text-center"><?php echo $standing[2]->Percentage ?></td>
             </tr>
             <tr>
-              <td><img src="<?php bloginfo('template_url');?>/images/icon-teams/eagles-icon.png" class="img-fluid table-row-custom" alt="Icono Philadelphia Eagles" width="25" height="25"> <span class="pl-1">Eagles </span></td>
-              <td class="text-center">4</td>
-              <td class="text-center">10</td>
-              <td class="text-center">1</td>
-              <td class="text-center">.300</td>
+              <td>
+                <img src="<?php bloginfo('template_url');?>/images/icon-teams/<?php echo $standing[3]->Division ?>" class="img-fluid table-row-custom" alt="" width="22" height="22">
+                <span class="pl-2"><?php echo $standing[3]->Name ?></span>
+              </td>
+              <td class="text-center"><?php echo $standing[3]->Wins ?></td>
+              <td class="text-center"><?php echo $standing[3]->Losses ?></td>
+              <td class="text-center"><?php echo $standing[3]->Ties ?></td>
+              <td class="text-center"><?php echo $standing[3]->Percentage ?></td>
             </tr>
           </tbody>
         </table>

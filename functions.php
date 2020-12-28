@@ -32,4 +32,69 @@ function wpb_add_google_fonts() {
 }
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts');
 
+function get_standings_for_API() {
+
+  $curl = curl_init();
+
+  curl_setopt($curl, CURLOPT_URL, "https://api.sportsdata.io/v3/nfl/scores/json/Standings/2020REG");
+  curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+  'Ocp-Apim-Subscription-Key:c9321f2e3ca24ffc851fc33ea70f5e3b'
+  ));
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+  $result = curl_exec($curl);
+  curl_close($curl);
+
+  $result = json_decode($result);
+
+  return $result;
+}
+
+function check_standings($teams) {
+
+  //COMPROBAR EMPATES EN EL RECORD
+
+  return $teams;
+}
+
+function get_standing_NFC_East() {
+
+  $standings = get_standings_for_API();
+
+  $teams = array();
+
+  foreach($standings as $standing) {
+
+    if ($standing->Conference == 'NFC' && $standing->Division == 'East') {
+
+      if ($standing->Team == 'NYG') {
+        $standing->Name = 'Giants';
+        $standing->Division = 'giants-icon.png';
+      }
+
+      if ($standing->Team == 'WAS') {
+        $standing->Name = 'Washington';
+        $standing->Division = 'washington-icon2.png';
+      }
+
+      if ($standing->Team == 'PHI') {
+        $standing->Name = 'Eagles';
+        $standing->Division = 'eagles-icon.png';
+      }
+
+      if ($standing->Team == 'DAL') {
+        $standing->Name = 'Cowboys';
+        $standing->Division = 'cowboys-icon.png';
+      }
+
+      array_push($teams, $standing);
+    }
+  }
+
+  $teams = check_standings($teams);
+
+  return $teams;
+
+}
+
 ?>
