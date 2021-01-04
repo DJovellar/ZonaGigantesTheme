@@ -50,50 +50,77 @@ function get_standings_for_API() {
   return $result;
 }
 
-function check_standings($teams) {
-
-  //COMPROBAR EMPATES EN EL RECORD
-
-  return $teams;
-}
+//Actualizar envez de insertar!!!!!!!!!!!!!!!!!!!!!!!!!
 
 function get_standing_NFC_East() {
 
   $standings = get_standings_for_API();
 
-  $teams = array();
+  global $wpdb;
 
   foreach($standings as $standing) {
 
     if ($standing->Conference == 'NFC' && $standing->Division == 'East') {
 
       if ($standing->Team == 'NYG') {
-        $standing->Name = 'Giants';
-        $standing->Division = 'giants-icon.png';
+
+        $wpdb->insert('standing',
+          array(
+          'Name'=> 'Giants',
+          'Division' => 'giants-icon.png',
+          'Win' => $standing->Wins,
+          'Losses' => $standing->Losses,
+          'Ties' => $standing->Ties,
+          'Percentage' => $standing->Percentage
+          )
+        );
       }
 
       if ($standing->Team == 'WAS') {
-        $standing->Name = 'Washington';
-        $standing->Division = 'washington-icon2.png';
+        $wpdb->insert('standing',
+          array(
+          'Name'=> 'Washington',
+          'Division' => 'washington-icon2.png',
+          'Win' => $standing->Wins,
+          'Losses' => $standing->Losses,
+          'Ties' => $standing->Ties,
+          'Percentage' => $standing->Percentage
+          )
+        );
       }
 
       if ($standing->Team == 'PHI') {
-        $standing->Name = 'Eagles';
-        $standing->Division = 'eagles-icon.png';
+        $wpdb->insert('standing',
+          array(
+          'Name'=> 'Eagles',
+          'Division' => 'eagles-icon.png',
+          'Win' => $standing->Wins,
+          'Losses' => $standing->Losses,
+          'Ties' => $standing->Ties,
+          'Percentage' => $standing->Percentage
+          )
+        );
       }
 
       if ($standing->Team == 'DAL') {
         $standing->Name = 'Cowboys';
         $standing->Division = 'cowboys-icon.png';
+        $wpdb->insert('standing',
+          array(
+          'Name'=> 'Cowboys',
+          'Division' => 'cowboys-icon.png',
+          'Win' => $standing->Wins,
+          'Losses' => $standing->Losses,
+          'Ties' => $standing->Ties,
+          'Percentage' => $standing->Percentage
+          )
+        );
       }
 
-      array_push($teams, $standing);
     }
   }
 
-  $teams = check_standings($teams);
 
-  return $teams;
 
 }
 

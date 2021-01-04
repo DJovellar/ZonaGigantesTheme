@@ -62,7 +62,11 @@
     </div>
   </div>
 
-  <?php $standing = get_standing_NFC_East(); ?>
+  <?php
+    //get_standing_NFC_East();
+    global $wpdb;
+    $standing = $wpdb->get_results("SELECT * FROM `standing`");
+  ?>
 
   <div class="container pt-4">
     <div class="row">
@@ -85,7 +89,7 @@
                 <img src="<?php bloginfo('template_url');?>/images/icon-teams/<?php echo $standing[0]->Division ?>" class="img-fluid table-row-custom" alt="" width="22" height="22">
                 <span class="pl-2"><?php echo $standing[0]->Name ?></span>
               </td>
-              <td class="text-center"><?php echo $standing[0]->Wins ?></td>
+              <td class="text-center"><?php echo $standing[0]->Win ?></td>
               <td class="text-center"><?php echo $standing[0]->Losses ?></td>
               <td class="text-center"><?php echo $standing[0]->Ties ?></td>
               <td class="text-center"><?php echo $standing[0]->Percentage ?></td>
@@ -95,7 +99,7 @@
                 <img src="<?php bloginfo('template_url');?>/images/icon-teams/<?php echo $standing[1]->Division ?>" class="img-fluid table-row-custom" alt="" width="22" height="22">
                 <span class="pl-2"><?php echo $standing[1]->Name ?></span>
               </td>
-              <td class="text-center"><?php echo $standing[1]->Wins ?></td>
+              <td class="text-center"><?php echo $standing[1]->Win ?></td>
               <td class="text-center"><?php echo $standing[1]->Losses ?></td>
               <td class="text-center"><?php echo $standing[1]->Ties ?></td>
               <td class="text-center"><?php echo $standing[1]->Percentage ?></td>
@@ -105,7 +109,7 @@
                 <img src="<?php bloginfo('template_url');?>/images/icon-teams/<?php echo $standing[2]->Division ?>" class="img-fluid table-row-custom" alt="" width="22" height="22">
                 <span class="pl-2"><?php echo $standing[2]->Name ?></span>
               </td>
-              <td class="text-center"><?php echo $standing[2]->Wins ?></td>
+              <td class="text-center"><?php echo $standing[2]->Win ?></td>
               <td class="text-center"><?php echo $standing[2]->Losses ?></td>
               <td class="text-center"><?php echo $standing[2]->Ties ?></td>
               <td class="text-center"><?php echo $standing[2]->Percentage ?></td>
@@ -115,7 +119,7 @@
                 <img src="<?php bloginfo('template_url');?>/images/icon-teams/<?php echo $standing[3]->Division ?>" class="img-fluid table-row-custom" alt="" width="22" height="22">
                 <span class="pl-2"><?php echo $standing[3]->Name ?></span>
               </td>
-              <td class="text-center"><?php echo $standing[3]->Wins ?></td>
+              <td class="text-center"><?php echo $standing[3]->Win ?></td>
               <td class="text-center"><?php echo $standing[3]->Losses ?></td>
               <td class="text-center"><?php echo $standing[3]->Ties ?></td>
               <td class="text-center"><?php echo $standing[3]->Percentage ?></td>
