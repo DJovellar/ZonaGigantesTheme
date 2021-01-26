@@ -1,7 +1,7 @@
 <?php
-    get_standing_NFC_East();
+    //get_standing_NFC_East();
     global $wpdb;
-    $standing = $wpdb->get_results("SELECT * FROM `standing`");
+    $standing = $wpdb->get_results("SELECT * FROM `standing` ORDER BY `Percentage` DESC");
 ?>
 
 <h5 class="text-center">NFC East</h5>

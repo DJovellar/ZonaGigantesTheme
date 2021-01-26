@@ -50,13 +50,14 @@ function get_standings_for_API() {
   return $result;
 }
 
-//Actualizar envez de insertar!!!!!!!!!!!!!!!!!!!!!!!!!
-
 function get_standing_NFC_East() {
+
+
+  global $wpdb;
+  $wpdb->query("TRUNCATE TABLE standing");
 
   $standings = get_standings_for_API();
 
-  global $wpdb;
 
   foreach($standings as $standing) {
 
@@ -116,12 +117,8 @@ function get_standing_NFC_East() {
           )
         );
       }
-
     }
   }
-
-
-
 }
 
 ?>
