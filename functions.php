@@ -32,11 +32,15 @@ function wpb_add_google_fonts() {
 }
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts');
 
-function get_standings_for_API() {
+/*
+  API calls for season standing and season schedule
+*/
+
+function call_API($url) {
 
   $curl = curl_init();
 
-  curl_setopt($curl, CURLOPT_URL, "https://api.sportsdata.io/v3/nfl/scores/json/Standings/2020REG");
+  curl_setopt($curl, CURLOPT_URL, $url);
   curl_setopt($curl, CURLOPT_HTTPHEADER, array(
   'Ocp-Apim-Subscription-Key:c9321f2e3ca24ffc851fc33ea70f5e3b'
   ));
@@ -50,14 +54,12 @@ function get_standings_for_API() {
   return $result;
 }
 
-function get_standing_NFC_East() {
-
+function update_standing_NFC_East() {
 
   global $wpdb;
   $wpdb->query("TRUNCATE TABLE standing");
 
-  $standings = get_standings_for_API();
-
+  $standings = call_API("https://api.sportsdata.io/v3/nfl/scores/json/Standings/2020REG");
 
   foreach($standings as $standing) {
 
@@ -119,6 +121,90 @@ function get_standing_NFC_East() {
       }
     }
   }
+}
+
+function update_current_week() {
+
+  $current_week = call_API("https://api.sportsdata.io/v3/nfl/scores/json/CurrentWeek");
+
+  global $wpdb;
+
+  $wpdb->update('params',
+    array(
+      'valor' => $current_week,
+    ),
+    array(
+      'clave' => 'currentWeek'
+    )
+  );
+}
+
+function update_schedule() {
+  global $wpdb;
+
+  $result = $wpdb->get_results("SELECT `valor` FROM `params` WHERE `clave` LIKE 'currentWeek' ");
+  $current_week = $result[0]->valor;
+
+  $scores_week = call_API("https://api.sportsdata.io/v3/nfl/scores/json/Scores/2020REG");
+
+  foreach($scores_week as $score_match) {
+
+    if(($score_match->HomeTeam == 'NYG' || $score_match->AwayTeam == 'NYG') && $score_match->Week == $current_week) {
+
+      $score_home = $score_match->HomeScoreQuarter1 + $score_match->HomeScoreQuarter2 + $score_match->HomeScoreQuarter3 + $score_match->HomeScoreQuarter4 + $score_match->HomeScoreOvertime;
+      $score_away = $score_match->AwayScoreQuarter1 + $score_match->AwayScoreQuarter2 + $score_match->AwayScoreQuarter3 + $score_match->AwayScoreQuarter4 + $score_match->AwayScoreOvertime;
+
+      $score = $score_home.'-'.$score_away;
+
+      if ($score_match->HomeTeam == 'NYG') {
+        if (($score_home - $score_away) > 0) {
+          $score = $score.' W';
+        } else if (($score_home - $score_away) < 0) {
+          $score = $score.' L';
+        } else {
+          $score = $score.' T';
+        }
+      } else {
+        if (($score_home - $score_away) > 0) {
+          $score = $score.' L';
+        } else if (($score_home - $score_away) < 0) {
+          $score = $score.' W';
+        } else {
+          $score = $score.' T';
+        }
+      }
+
+      $wpdb->update('schedule',
+      array(
+        'score' => $score,
+        'date' => 'Finalizado'
+      ),
+      array(
+        'week' => (int) $current_week
+      ));
+
+      break;
+    }
+  }
+}
+
+function get_schedule() {
+  global $wpdb;
+
+  $result = $wpdb->get_results("SELECT `valor` FROM `params` WHERE `clave` LIKE 'currentWeek' ");
+
+  $current_week = (int) $result[0]->valor;
+
+  if ($current_week == 1 || $current_week == 2) {
+    $schedule = $wpdb->get_results("SELECT * FROM `schedule` ORDER BY `week` LIMIT 4");
+  }
+  else if($current_week == 17) {
+    $schedule = $wpdb->get_results("SELECT * FROM `schedule` WHERE `week` IN (14,15,16,17) ORDER BY `week`");
+  } else {
+    $schedule = $wpdb->get_results("SELECT * FROM `schedule` WHERE `week` IN ($current_week-2, $current_week-1, $current_week, $current_week+1) ORDER BY `week`");
+  }
+
+  return $schedule;
 }
 
 ?>
