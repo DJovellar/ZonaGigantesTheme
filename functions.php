@@ -124,19 +124,23 @@ function update_standing_NFC_East() {
 }
 
 function update_current_week() {
-
-  $current_week = call_API("https://api.sportsdata.io/v3/nfl/scores/json/CurrentWeek");
-
   global $wpdb;
 
-  $wpdb->update('params',
-    array(
-      'valor' => $current_week,
-    ),
-    array(
-      'clave' => 'currentWeek'
-    )
-  );
+  $result = $wpdb->get_results("SELECT `valor` FROM `params` WHERE `clave` LIKE 'currentWeek' ");
+  $current_week = (int) $result[0]->valor;
+
+  if ($current_week != 17) {
+    $current_week = call_API("https://api.sportsdata.io/v3/nfl/scores/json/CurrentWeek");
+
+    $wpdb->update('params',
+      array(
+        'valor' => $current_week,
+      ),
+      array(
+        'clave' => 'currentWeek'
+      )
+    );
+  }
 }
 
 function update_schedule() {
@@ -149,7 +153,7 @@ function update_schedule() {
 
   foreach($scores_week as $score_match) {
 
-    if(($score_match->HomeTeam == 'NYG' || $score_match->AwayTeam == 'NYG') && $score_match->Week == $current_week) {
+    if(($score_match->HomeTeam == 'NYG' || $score_match->AwayTeam == 'NYG') && $score_match->Week == $current_week && $score_match->IsOver) {
 
       $score_home = $score_match->HomeScoreQuarter1 + $score_match->HomeScoreQuarter2 + $score_match->HomeScoreQuarter3 + $score_match->HomeScoreQuarter4 + $score_match->HomeScoreOvertime;
       $score_away = $score_match->AwayScoreQuarter1 + $score_match->AwayScoreQuarter2 + $score_match->AwayScoreQuarter3 + $score_match->AwayScoreQuarter4 + $score_match->AwayScoreOvertime;
