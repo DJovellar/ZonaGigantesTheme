@@ -86,36 +86,35 @@
   </div>
 
   <div id="videos" class="container pt-5">
+
+    <?php $last_videos = get_last_videos();
+    save_new_videos();?>
+
     <h2>Últimos videos</h2>
     <hr>
     <div class="row no-gutters pt-1">
-      <?php
-        $posts = new WP_Query(array(
-          'cat' => '5',
-          'posts_per_page' => 2,
-        ));
-        if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
-          <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 pl-1 padding-videos" >
-            <div class="embed-responsive embed-responsive-16by9">
-              <?php the_content() ?>
-            </div>
-          </div>
-        <?php endwhile; endif; ?>
+      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 pl-1 padding-videos" >
+        <div class="embed-responsive embed-responsive-16by9">
+          <?php echo $last_videos[0]->iframe ?>
+        </div>
+      </div>
+      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 pl-1 padding-videos" >
+        <div class="embed-responsive embed-responsive-16by9">
+          <?php echo $last_videos[1]->iframe ?>
+        </div>
+      </div>
     </div>
     <div class="row no-gutters">
-      <?php
-        $posts = new WP_Query(array(
-          'cat' => '5',
-          'posts_per_page' => 2,
-          'offset' => 2,
-        ));
-        if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
-          <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 pl-1 padding-videos">
-            <div class="embed-responsive embed-responsive-16by9">
-              <?php the_content() ?>
-            </div>
-          </div>
-        <?php endwhile; endif; ?>
+      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 pl-1 padding-videos">
+        <div class="embed-responsive embed-responsive-16by9">
+          <?php echo $last_videos[2]->iframe ?>
+        </div>
+      </div>
+      <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6 pl-1 padding-videos">
+        <div class="embed-responsive embed-responsive-16by9">
+          <?php echo $last_videos[3]->iframe ?>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -36,7 +36,7 @@ add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts');
   API calls for season standing and season schedule
 */
 
-function call_API($url) {
+function call_stats_API($url) {
 
   $curl = curl_init();
 
@@ -59,7 +59,7 @@ function update_standing_NFC_East() {
   global $wpdb;
   $wpdb->query("TRUNCATE TABLE standing");
 
-  $standings = call_API("https://api.sportsdata.io/v3/nfl/scores/json/Standings/2020REG");
+  $standings = call_stats_API("https://api.sportsdata.io/v3/nfl/scores/json/Standings/2020REG");
 
   foreach($standings as $standing) {
 
@@ -130,7 +130,7 @@ function update_current_week() {
   $current_week = (int) $result[0]->valor;
 
   if ($current_week != 17) {
-    $current_week = call_API("https://api.sportsdata.io/v3/nfl/scores/json/CurrentWeek");
+    $current_week = call_stats_API("https://api.sportsdata.io/v3/nfl/scores/json/CurrentWeek");
 
     $wpdb->update('params',
       array(
@@ -149,7 +149,7 @@ function update_schedule() {
   $result = $wpdb->get_results("SELECT `valor` FROM `params` WHERE `clave` LIKE 'currentWeek' ");
   $current_week = $result[0]->valor;
 
-  $scores_week = call_API("https://api.sportsdata.io/v3/nfl/scores/json/Scores/2020REG");
+  $scores_week = call_stats_API("https://api.sportsdata.io/v3/nfl/scores/json/Scores/2020REG");
 
   foreach($scores_week as $score_match) {
 
@@ -209,6 +209,63 @@ function get_schedule() {
   }
 
   return $schedule;
+}
+
+/*
+  API calls for get uploaded videos in Youtube
+*/
+
+function call_youtube_API($url) {
+
+  $url = $url."&key=AIzaSyCoNT2EnZmffQc6ZvcqqHOpj_NaNGscbjY";
+
+  $curl = curl_init();
+
+  curl_setopt($curl, CURLOPT_URL, $url);
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+  $result = curl_exec($curl);
+  curl_close($curl);
+
+  $result = json_decode($result);
+
+  return $result;
+}
+
+function save_new_videos() {
+  global $wpdb;
+
+  $result = call_youtube_API("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC9MUffNRPYDd3S2JlVXpBlw&maxResults=3&order=date&type=video");
+
+  for ($i=2; $i >= 0 ; $i--) {
+
+    $ids = $wpdb->get_results("SELECT id FROM `videos` ORDER BY id DESC");
+
+    if(!empty($ids)) {
+      $last_id = $ids[0]->id;
+    } else {
+      $last_id = 0;
+    }
+
+    $iframe = '<iframe src="https://www.youtube.com/embed/'.$result->items[$i]->id->videoId.'" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
+
+    $wpdb->insert('videos',
+      array(
+      'id' => $last_id + 1,
+      'id_video' => $result->items[$i]->id->videoId,
+      'iframe' => $iframe,
+      'title' => $result->items[$i]->snippet->title
+      )
+    );
+  }
+}
+
+function get_last_videos() {
+  global $wpdb;
+
+  $videos = $wpdb->get_results("SELECT * FROM `videos` ORDER BY `id` DESC LIMIT 4");
+
+  return $videos;
 }
 
 ?>
