@@ -1,5 +1,4 @@
 <?php
-    //update_standing_NFC_East();
     global $wpdb;
     $standing = $wpdb->get_results("SELECT * FROM `standing` ORDER BY `Percentage` DESC");
 ?>

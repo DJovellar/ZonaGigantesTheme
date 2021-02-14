@@ -122,6 +122,7 @@ function update_standing_NFC_East() {
     }
   }
 }
+add_action('update_standing', 'update_standing_NFC_East');
 
 function update_current_week() {
   global $wpdb;
@@ -142,8 +143,9 @@ function update_current_week() {
     );
   }
 }
+add_action('update_week', 'update_current_week');
 
-function update_schedule() {
+function update_schedule_NYG() {
   global $wpdb;
 
   $result = $wpdb->get_results("SELECT `valor` FROM `params` WHERE `clave` LIKE 'currentWeek' ");
@@ -191,6 +193,7 @@ function update_schedule() {
     }
   }
 }
+add_action('update_schedule', 'update_schedule_NYG');
 
 function get_schedule() {
   global $wpdb;
@@ -259,6 +262,7 @@ function save_all_videos() {
     );
   }
 }
+add_action('save_all_youtube_videos', 'save_all_videos');
 
 function save_new_videos() {
   global $wpdb;
@@ -287,6 +291,7 @@ function save_new_videos() {
     );
   }
 }
+add_action('save_new_youtube_videos', 'save_new_videos');
 
 function get_last_videos() {
   global $wpdb;

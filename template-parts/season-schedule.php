@@ -1,7 +1,5 @@
 
 <?php
-    //update_schedule();
-    //update_current_week();
     $schedule = get_schedule();
 ?>
 
