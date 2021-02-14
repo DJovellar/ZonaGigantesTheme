@@ -88,7 +88,7 @@
   <div id="videos" class="container pt-5">
 
     <?php $last_videos = get_last_videos();
-    save_new_videos();?>
+    //save_new_videos();?>
 
     <h2>Últimos videos</h2>
     <hr>
