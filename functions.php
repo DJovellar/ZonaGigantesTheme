@@ -232,6 +232,34 @@ function call_youtube_API($url) {
   return $result;
 }
 
+function save_all_videos() {
+  global $wpdb;
+
+  $result = call_youtube_API("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC9MUffNRPYDd3S2JlVXpBlw&maxResults=50&order=date&type=video");
+
+  for ($i=49; $i >= 0 ; $i--) {
+
+    $ids = $wpdb->get_results("SELECT id FROM `videos` ORDER BY id DESC");
+
+    if(!empty($ids)) {
+      $last_id = $ids[0]->id;
+    } else {
+      $last_id = 0;
+    }
+
+    $iframe = '<iframe src="https://www.youtube.com/embed/'.$result->items[$i]->id->videoId.'" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
+
+    $wpdb->insert('videos',
+      array(
+      'id' => $last_id + 1,
+      'id_video' => $result->items[$i]->id->videoId,
+      'iframe' => $iframe,
+      'title' => $result->items[$i]->snippet->title
+      )
+    );
+  }
+}
+
 function save_new_videos() {
   global $wpdb;
 
