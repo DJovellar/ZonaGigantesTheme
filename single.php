@@ -18,7 +18,7 @@
                         <div class="d-none d-sm-block d-md-block d-lg-block d-xl-block col-sm-2 col-md-4 col-lg-6 col-xl-6"></div>
                         <div class="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1 text-center">
                             <a href="#comments-container" class="text-decoration-none text-black-50">
-                                <?php comments_number( '0', '1', '%') ?>          
+                                <?php comments_number( '0', '1', '%') ?>
                                 <img src="<?php bloginfo('template_url');?>/images/other-icons/comment-icon.png" class="img-fluid" height="20" width="15">
                             </a>
                         </div>
@@ -29,10 +29,11 @@
                     </div>
 
                     <div id="comments-container">
-                        <?php 
-                            if (comments_open() || get_comments_number()) :
-                                comments_template();
-                            endif;
+                        <?php
+                            // If comments are open or we have at least one comment, load up the comment template.
+				            if ( comments_open() || get_comments_number() ) {
+					            comments_template();
+				            }
                         ?>
                     </div>
 
@@ -44,3 +45,5 @@
     <?php endwhile; endif; ?>
 
 <?php get_footer() ?>
+
+<?php wp_footer() ?>
