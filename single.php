@@ -30,9 +30,10 @@
 
                     <div id="comments-container">
                         <?php
-                            if (comments_open() || get_comments_number()) :
-                                //comments_template();
-                            endif;
+                            // If comments are open or we have at least one comment, load up the comment template.
+				            if ( comments_open() || get_comments_number() ) {
+					            comments_template();
+				            }
                         ?>
                     </div>
 
@@ -44,3 +45,5 @@
     <?php endwhile; endif; ?>
 
 <?php get_footer() ?>
+
+<?php wp_footer() ?>

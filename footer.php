@@ -39,7 +39,7 @@
                                 <span class="pl-3">Youtube</span>
                             </li>
                         </a>
-                    </ul> 
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-xl-4 pl-lg-5 pl-xl-5 pt-4 pt-sm-4 pt-md-4 pt-lg-3 pt-xl-3">
                     <h4 class="text-center">Secciones</h4>
@@ -49,7 +49,7 @@
                         <li class="text-center" style="padding: 10px;"><a href="<?php echo esc_url( get_category_link('5') ); ?>" class="text-decoration-none text-white">Videos</a></li>
                         <li class="text-center" style="padding: 10px;"><a href="<?php echo esc_url( get_category_link('3') ); ?>" class="text-decoration-none text-white">Contacto</a></li>
                     </ul>
-                     
+
                 </div>
             </div>
             <div class="row pt-3 pl-lg-5">
@@ -62,9 +62,9 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- <script src="js/bootstrap.min.js"></script> -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
