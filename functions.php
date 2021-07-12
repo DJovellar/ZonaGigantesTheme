@@ -151,7 +151,7 @@ function update_schedule_NYG() {
   $result = $wpdb->get_results("SELECT `valor` FROM `params` WHERE `clave` LIKE 'currentWeek' ");
   $current_week = $result[0]->valor;
 
-  $scores_week = call_stats_API("https://api.sportsdata.io/v3/nfl/scores/json/Scores/2020REG");
+  $scores_week = call_stats_API("https://api.sportsdata.io/v3/nfl/scores/json/Scores/2021REG");
 
   foreach($scores_week as $score_match) {
 
@@ -201,6 +201,10 @@ function get_schedule() {
   $result = $wpdb->get_results("SELECT `valor` FROM `params` WHERE `clave` LIKE 'currentWeek' ");
 
   $current_week = (int) $result[0]->valor;
+
+  if ($current_week == 0) {
+    $current_week = 1;
+  }
 
   if ($current_week == 1 || $current_week == 2) {
     $schedule = $wpdb->get_results("SELECT * FROM `schedule` ORDER BY `week` LIMIT 4");
