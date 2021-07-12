@@ -59,7 +59,7 @@ function update_standing_NFC_East() {
   global $wpdb;
   $wpdb->query("TRUNCATE TABLE standing");
 
-  $standings = call_stats_API("https://api.sportsdata.io/v3/nfl/scores/json/Standings/2020REG");
+  $standings = call_stats_API("https://api.sportsdata.io/v3/nfl/scores/json/Standings/2021REG");
 
   foreach($standings as $standing) {
 
