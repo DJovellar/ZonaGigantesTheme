@@ -7,7 +7,7 @@ Version: 1.0
 */
 
 h1,h2,h3,h4,h5,h6{
-    font-family: 'Russo One', sans-serif; 
+    font-family: 'Russo One', sans-serif;
 }
 
 .font-text{
@@ -16,7 +16,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .custom-shadow{
-    text-shadow:    
+    text-shadow:
         0.04em 0 black,
         0 0.04em black,
         -0.04em 0 black,
@@ -58,6 +58,11 @@ textarea{
 .footer-social{
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.3rem;
+}
+
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link{
+    background: #00035F !important;
 }
 
 
@@ -225,10 +230,3 @@ textarea{
         font-size: 0.9rem;
     }
 }
-
-
-
-
-
-
-

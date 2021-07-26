@@ -32,6 +32,16 @@ function wpb_add_google_fonts() {
 }
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts');
 
+if ( ! function_exists('write_log')) {
+   function write_log ( $log )  {
+      if ( is_array( $log ) || is_object( $log ) ) {
+         error_log( print_r( $log, true ) );
+      } else {
+         error_log( $log );
+      }
+   }
+}
+
 /*
   API calls for season standing and season schedule
 */
@@ -299,6 +309,71 @@ function get_last_videos() {
   $videos = $wpdb->get_results("SELECT * FROM `videos` ORDER BY `id` DESC LIMIT 4");
 
   return $videos;
+}
+
+function prova() {
+  require_once('simple_html_dom.php');
+  global $wpdb;
+
+  $html = file_get_html('https://www.giants.com/team/stats/2020/REG');
+  $tables = $html->find('.nfl-o-teamstats');
+
+  foreach($tables as $table) {
+    $table_title = $table->find('.nfl-o-teamstats__title', 0);
+    $table_title = str_replace(' ', '', $table_title->plaintext);
+
+    if ($table_title === 'Passing') {
+
+      $headers = $table->find('tr', 0);
+      $players = $table->find('tr');
+
+      $wpdb->query('START TRANSACTION');
+
+      $wpdb->query("DELETE FROM stats_passing");
+
+      foreach($players as $index=>$player) {
+        if ($index == 0) {
+          // Es la fila de cabeceras
+          continue;
+        }
+
+        $data = array();
+
+        foreach($headers->children() as $index2=>$header_aux) {
+          $header = str_replace(' ', '', $header_aux->plaintext);
+
+          if ($header === 'Player') {
+            $value_aux = $player->children($index2)->children(0)->children(1)->plaintext;
+            $value = str_replace(' ', '', $value_aux);
+          } else {
+            $value_aux = $player->children($index2)->plaintext;
+            $value = str_replace(' ', '', $value_aux);
+          }
+
+          $data[$header] = $value;
+        }
+
+        $error = $wpdb->insert('stats_passing', $data);
+
+        if ($error) {
+          write_log("CUSTOM:: Player {$data['Player']} updated in table Stats Passing");
+          $wpdb->query('COMMIT');
+        } else {
+          write_log("CUSTOM:: Player {$data['Player']} not updated in table Stats Passing");
+          $wpdb->query('ROLLBACK');
+        }
+      }
+    } else {
+      write_log("CUSTOM:: Table Stats Passing not found");
+    }
+
+    if ($table_title === 'Rushing') {
+
+    } else {
+      write_log("CUSTOM:: Table Stats Russing not found");
+  }
+
+  }
 }
 
 ?>
