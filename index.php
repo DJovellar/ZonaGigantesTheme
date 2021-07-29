@@ -86,7 +86,7 @@
   </div>
 
   <h1>
-    <?php prova() ?>
+    <?php //get_stats_players() ?>
   </h1>
 
   <div id="videos" class="container pt-5">

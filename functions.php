@@ -311,9 +311,8 @@ function get_last_videos() {
   return $videos;
 }
 
-function prova() {
+function get_stats_players() {
   require_once('simple_html_dom.php');
-  global $wpdb;
 
   $html = file_get_html('https://www.giants.com/team/stats/2020/REG');
   $tables = $html->find('.nfl-o-teamstats');
@@ -323,57 +322,65 @@ function prova() {
     $table_title = str_replace(' ', '', $table_title->plaintext);
 
     if ($table_title === 'Passing') {
-
-      $headers = $table->find('tr', 0);
-      $players = $table->find('tr');
-
-      $wpdb->query('START TRANSACTION');
-
-      $wpdb->query("DELETE FROM stats_passing");
-
-      foreach($players as $index=>$player) {
-        if ($index == 0) {
-          // Es la fila de cabeceras
-          continue;
-        }
-
-        $data = array();
-
-        foreach($headers->children() as $index2=>$header_aux) {
-          $header = str_replace(' ', '', $header_aux->plaintext);
-
-          if ($header === 'Player') {
-            $value_aux = $player->children($index2)->children(0)->children(1)->plaintext;
-            $value = str_replace(' ', '', $value_aux);
-          } else {
-            $value_aux = $player->children($index2)->plaintext;
-            $value = str_replace(' ', '', $value_aux);
-          }
-
-          $data[$header] = $value;
-        }
-
-        $error = $wpdb->insert('stats_passing', $data);
-
-        if ($error) {
-          write_log("CUSTOM:: Player {$data['Player']} updated in table Stats Passing");
-          $wpdb->query('COMMIT');
-        } else {
-          write_log("CUSTOM:: Player {$data['Player']} not updated in table Stats Passing");
-          $wpdb->query('ROLLBACK');
-        }
-      }
-    } else {
-      write_log("CUSTOM:: Table Stats Passing not found");
+      save_stats($table, 'stats_passing');
     }
 
     if ($table_title === 'Rushing') {
+      save_stats($table, 'stats_rushing');
+    }
 
-    } else {
-      write_log("CUSTOM:: Table Stats Russing not found");
-  }
+    if ($table_title === 'Receiving') {
+      save_stats($table, 'stats_receiving');
+    }
 
   }
+}
+
+function save_stats($table, $table_title) {
+    global $wpdb;
+    $headers = $table->find('tr', 0);
+    $players = $table->find('tr');
+
+    $wpdb->query('START TRANSACTION');
+
+    $wpdb->query("DELETE FROM $table_title");
+
+    foreach($players as $index=>$player) {
+      if ($index == 0) {
+        // Es la fila de cabeceras
+        continue;
+      }
+
+      $data = array();
+
+      foreach($headers->children() as $index2=>$header_aux) {
+        $header = str_replace(' ', '', $header_aux->plaintext);
+
+        if ($header === 'Player') {
+          $value_aux = $player->children($index2)->children(0)->children(1)->plaintext;
+          $value = trim($value_aux);
+
+          $photo_aux = str_replace(' ', '-', $value);
+          $photo = $photo_aux.".png";
+        } else {
+          $value_aux = $player->children($index2)->plaintext;
+          $value = trim($value_aux);
+        }
+
+        $data[$header] = $value;
+        $data['Photo'] = $photo;
+      }
+
+      $error = $wpdb->insert($table_title, $data);
+
+      if ($error) {
+        write_log("CUSTOM:: Player {$data['Player']} updated in table {$table_title}");
+        $wpdb->query('COMMIT');
+      } else {
+        write_log("CUSTOM:: Player {$data['Player']} not updated in table {$table_title}");
+        $wpdb->query('ROLLBACK');
+      }
+    }
 }
 
 ?>
