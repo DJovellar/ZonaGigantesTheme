@@ -333,6 +333,14 @@ function get_stats_players() {
       save_stats($table, 'stats_receiving');
     }
 
+    if ($table_title === 'Tackles') {
+      save_stats($table, 'stats_defense_tackles');
+    }
+
+    if ($table_title === 'Interceptions') {
+      save_stats($table, 'stats_defense_ints');
+    }
+
   }
 }
 
