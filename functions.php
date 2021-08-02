@@ -343,6 +343,7 @@ function get_stats_players() {
 
   }
 }
+add_action('get_stats_players', 'get_stats_players');
 
 function save_stats($table, $table_title) {
     global $wpdb;

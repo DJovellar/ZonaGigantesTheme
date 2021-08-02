@@ -85,10 +85,6 @@
     </div>
   </div>
 
-  <h1>
-    <?php //get_stats_players() ?>
-  </h1>
-
   <div id="videos" class="container pt-5">
 
     <?php $last_videos = get_last_videos();
