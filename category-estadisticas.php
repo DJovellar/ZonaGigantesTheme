@@ -17,7 +17,7 @@
                 $stats_passing = $wpdb->get_results("SELECT * FROM stats_passing ORDER BY cast(YDS as signed) DESC");
             ?>
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped" id="passTable">
                     <thead>
                         <tr>
                             <th scope="col" class="text-center" style="width: 10%"></th>
@@ -63,7 +63,7 @@
                 $stats_rushing = $wpdb->get_results("SELECT * FROM stats_rushing ORDER BY cast(YDS as signed) DESC");
             ?>
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped" id="rushTable">
                     <thead>
                         <tr>
                             <th scope="col" class="text-center" style="width: 10%"></th>
@@ -102,7 +102,7 @@
                 $stats_receiving = $wpdb->get_results("SELECT * FROM stats_receiving ORDER BY cast(YDS as signed) DESC");
             ?>
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped" id="receivingTable">
                     <thead>
                         <tr>
                             <th scope="col" class="text-center align-middle" style="width: 10%"></th>
@@ -150,7 +150,7 @@
                                                      LEFT JOIN stats_defense_ints i ON t.Photo = i.Photo ORDER BY cast(t.TOTAL as signed) DESC");
             ?>
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped " id="defenseTable">
                     <thead>
                         <tr>
                             <th scope="col" class="text-center align-middle" style="width: 10%"></th>
@@ -188,3 +188,28 @@
 </div>
 
 <?php get_footer()?>
+
+<script>
+    $(document).ready( function () {
+        $('#passTable').DataTable({
+            paging: false,
+            info: false,
+            searching: false
+        });
+        $('#rushTable').DataTable({
+            paging: false,
+            info: false,
+            searching: false
+        });
+        $('#receivingTable').DataTable({
+            paging: false,
+            info: false,
+            searching: false
+        });
+        $('#defenseTable').DataTable({
+            paging: false,
+            info: false,
+            searching: false
+        });
+    } );
+</script>
