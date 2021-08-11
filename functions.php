@@ -192,8 +192,7 @@ function update_schedule_NYG() {
 
       $wpdb->update('schedule',
       array(
-        'score' => $score,
-        'date' => 'Finalizado'
+        'score' => $score
       ),
       array(
         'week' => (int) $current_week
@@ -383,13 +382,276 @@ function save_stats($table, $table_title) {
       $error = $wpdb->insert($table_title, $data);
 
       if ($error) {
-        write_log("CUSTOM:: Player {$data['Player']} updated in table {$table_title}");
+        write_log("save_stats:: Player {$data['Player']} updated in table {$table_title}");
         $wpdb->query('COMMIT');
       } else {
-        write_log("CUSTOM:: Player {$data['Player']} not updated in table {$table_title}");
+        write_log("save_stats:: Player {$data['Player']} not updated in table {$table_title}");
         $wpdb->query('ROLLBACK');
       }
     }
+}
+
+function get_stats_match() {
+  require_once('simple_html_dom.php');
+
+  global $wpdb;
+  $week_aux = $wpdb->get_results("SELECT `valor` FROM `params` WHERE `clave` LIKE 'currentWeek' ");
+  $current_week = (int) $week_aux[0]->valor;
+
+  $match = $wpdb->get_results("SELECT * FROM `schedule` WHERE `week` = $current_week");
+
+  if ($match != null) {
+    $url = get_url_cbs($match[0]);
+
+    // https://www.cbssports.com/nfl/gametracker/boxscore/NFL_20200914_PIT@NYG/
+    $html = file_get_html($url);
+
+    if ($html != null) {
+      $stats_teams_match = $html->find('.team-stats', 0);
+      $stats_players_match = $html->find('.player-stats-container', 0);
+
+      get_stats_match_teams($match, $current_week, $stats_teams_match);
+      get_stats_match_players($match, $current_week, $stats_players_match);
+
+    } else {
+      write_log("get_stats_match:: The url: '{$url}' of the mach is wrong");
+    }
+  } else {
+    write_log("get_stats_match:: The match in the Week {$current_week} not exists in the Schedule table");
+  }
+}
+add_action('get_stats_match', 'get_stats_match');
+
+function get_stats_match_teams($match, $current_week, $data) {
+  $data_home = array();
+  $data_away = array();
+
+  if ($match[0]->home == 1) {
+    $data_home['Team'] = 'Giants';
+    $data_away['Team'] = $match[0]->rival;
+  } else {
+    $data_home['Team'] = $match[0]->rival;
+    $data_away['Team'] = 'Giants';
+  }
+
+  $data_home['Week'] = $current_week;
+  $data_away['Week'] = $current_week;
+
+  $stats = $data->find('.stat-category');
+
+  foreach($stats as $stat) {
+    $header = $stat->children(0)->plaintext;
+    $data_home[$header] = str_replace(' ', '', $stat->children(1)->plaintext);
+    $data_away[$header] = str_replace(' ', '', $stat->children(2)->plaintext);
+  }
+
+  global $wpdb;
+  $wpdb->query('START TRANSACTION');
+
+  $wpdb->insert('stats_match_teams', $data_home);
+  $wpdb->insert('stats_match_teams', $data_away);
+
+  $wpdb->query('COMMIT');
+}
+
+function get_stats_match_players($match, $current_week, $data) {
+  $data_home = array();
+  $data_away = array();
+
+  if ($match[0]->home == 1) {
+    $data_home['Team'] = 'Giants';
+    $data_away['Team'] = $match[0]->rival;
+  } else {
+    $data_home['Team'] = $match[0]->rival;
+    $data_away['Team'] = 'Giants';
+  }
+
+  $data_home['Week'] = $current_week;
+  $data_away['Week'] = $current_week;
+
+  // No es un error, salen al reves en el HTML
+  $stats_home = $data->find('#player-stats-away', 0);
+  $stats_away = $data->find('#player-stats-home', 0);
+
+  $table = $stats_home->find('.passing-ctr', 0);
+  $data_home['Type'] = 'Passing';
+  get_stats_by_position($table, $data_home);
+
+  $table = $stats_home->find('.rushing-ctr', 0);
+  $data_home['Type'] = 'Rushing';
+  get_stats_by_position($table, $data_home);
+
+  $table = $stats_home->find('.receiving-ctr', 0);
+  $data_home['Type'] = 'Receiving';
+  get_stats_by_position($table, $data_home);
+
+  $table = $stats_home->find('.defense-ctr', 0);
+  $data_home['Type'] = 'Defense';
+  get_stats_by_position($table, $data_home);
+
+  $table = $stats_away->find('.passing-ctr', 0);
+  $data_away['Type'] = 'Passing';
+  get_stats_by_position($table, $data_away);
+
+  $table = $stats_away->find('.rushing-ctr', 0);
+  $data_away['Type'] = 'Rushing';
+  get_stats_by_position($table, $data_away);
+
+  $table = $stats_away->find('.receiving-ctr', 0);
+  $data_away['Type'] = 'Receiving';
+  get_stats_by_position($table, $data_away);
+
+  $table = $stats_away->find('.defense-ctr', 0);
+  $data_away['Type'] = 'Defense';
+  get_stats_by_position($table, $data_away);
+
+}
+
+function get_stats_by_position($table, $data) {
+
+  global $wpdb;
+
+  $headers_aux = $table->find('.stats-header', 0);
+  $headers = $headers_aux->find('td');
+
+  $players = $table->find('.data-row');
+
+  $wpdb->query('START TRANSACTION');
+
+  foreach($players as $player) {
+    foreach($player->children() as $index=>$stat) {
+      if ($index == 0) {
+        continue;
+      }
+
+      if ($index == 1) {
+        $name_aux = str_replace(' ', '', $stat->children(0)->children(0)->plaintext);
+
+        $name_split = explode('.', $name_aux);
+        $name = $name_split[0].'. '.$name_split[1];
+
+        $data['Player'] = $name;
+      } else {
+        $key_aux = $headers[$index - 1]->plaintext;
+        $key = str_replace(' ', '', $key_aux);
+
+        $data[$key] = str_replace(' ', '', $stat->plaintext);
+      }
+    }
+
+    $error = $wpdb->insert('stats_match_players', $data);
+
+  }
+  $wpdb->query('COMMIT');
+}
+
+function get_url_cbs($match) {
+    $rival = $match->rival;
+    $date = $match->date;
+
+    $date_aux = explode(' ', $date);
+    $date_aux2 = explode('/', $date_aux[0]);
+
+    if ($date_aux[1] == '02:20' || $date_aux[1] == '01:15' || $date_aux[1] == '02:15') {
+      $date_int = (int) $date_aux2[0] - 1;
+      $date_str = strval($date_int);
+
+      if (strlen($date_str) < 2) {
+        $date_aux2[0] = '0'.$date_str;
+      } else {
+        $date_aux2[0] = $date_str;
+      }
+    }
+
+    if ($date_aux2[1] == '01' || $date_aux2[1] == '02' || $date_aux2[1] == '03') {
+      $year = 'NFL_2022';
+    } else {
+      $year = 'NFL_2021';
+    }
+
+    $date_formatted = $year.$date_aux2[1].$date_aux2[0].'_';
+
+    $rival_shortcut = find_shortcut($rival);
+
+    if ($match->home == 1) {
+      $date_formatted = $date_formatted.'NYG@'.$rival_shortcut;
+    } else {
+      $date_formatted = $date_formatted.$rival_shortcut.'@NYG';
+    }
+
+    $url = 'https://www.cbssports.com/nfl/gametracker/boxscore/'.$date_formatted;
+
+    return $url;
+}
+
+function find_shortcut($rival) {
+  $shorcut = '';
+
+  if ($rival == 'Steelers') {
+    $shorcut = 'PIT';
+  }
+
+  if ($rival == 'Bears') {
+    $shorcut = 'CHI';
+  }
+
+  if ($rival == '49ers') {
+    $shorcut = 'SF';
+  }
+
+  if ($rival == 'Rams') {
+    $shorcut = 'LAR';
+  }
+
+  if ($rival == 'Cowboys') {
+    $shorcut = 'DAL';
+  }
+
+  if ($rival == 'Broncos') {
+    $shorcut = 'DEN';
+  }
+
+  if ($rival == 'Washington') {
+    $shorcut = 'WAS';
+  }
+
+  if ($rival == 'Falcons') {
+    $shorcut = 'ATL';
+  }
+
+  if ($rival == 'Saints') {
+    $shorcut = 'NO';
+  }
+
+  if ($rival == 'Panthers') {
+    $shorcut = 'CAR';
+  }
+
+  if ($rival == 'Chiefs') {
+    $shorcut = 'KC';
+  }
+
+  if ($rival == 'Raiders') {
+    $shorcut = 'LV';
+  }
+
+  if ($rival == 'Buccaneers') {
+    $shorcut = 'TB';
+  }
+
+  if ($rival == 'Eagles') {
+    $shorcut = 'PHI';
+  }
+
+  if ($rival == 'Dolphins') {
+    $shorcut = 'MIA';
+  }
+
+  if ($rival == 'Chargers') {
+    $shorcut = 'LAC';
+  }
+
+  return $shorcut;
 }
 
 ?>
