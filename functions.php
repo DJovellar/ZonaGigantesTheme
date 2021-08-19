@@ -654,4 +654,36 @@ function find_shortcut($rival) {
   return $shorcut;
 }
 
+function get_stats_match_click() {
+
+  $week = $_POST['week'];
+
+  $stats = array();
+
+  global $wpdb;
+
+  $match = $wpdb->get_results("SELECT * FROM schedule WHERE week LIKE $week ");
+
+  if ($match[0]->home) {
+    $stats_match_home = $wpdb->get_results("SELECT * FROM stats_match_teams WHERE Week LIKE $week AND Team LIKE 'Giants' ");
+    $stats_match_away = $wpdb->get_results("SELECT * FROM stats_match_teams WHERE Week LIKE $week AND Team NOT LIKE 'Giants' ");
+  } else {
+    $stats_match_home = $wpdb->get_results("SELECT * FROM stats_match_teams WHERE Week LIKE $week AND Team NOT LIKE 'Giants' ");
+    $stats_match_away = $wpdb->get_results("SELECT * FROM stats_match_teams WHERE Week LIKE $week AND Team LIKE 'Giants' ");
+  }
+
+  $stats_players = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week ");
+
+  $stats['match'] = $match;
+
+  $stats['match_home'] = $stats_match_home;
+  $stats['match_away'] = $stats_match_away;
+  $stats['players'] = $stats_players;
+
+  echo json_encode($stats);
+  die();
+}
+add_action('wp_ajax_get_stats_match_click', 'get_stats_match_click');
+add_action('wp_ajax_nopriv_get_stats_match_click', 'get_stats_match_click');
+
 ?>
