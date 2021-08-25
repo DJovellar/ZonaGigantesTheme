@@ -1,4 +1,5 @@
 <?php
+wp_enqueue_script('jquery');
 
 // Creamos el menu
 if (function_exists('register_nav_menus')) {
@@ -310,7 +311,7 @@ function get_last_videos() {
   return $videos;
 }
 
-function get_stats_players() {
+function get_stats_season() {
   require_once('simple_html_dom.php');
 
   $html = file_get_html('https://www.giants.com/team/stats/2020/REG');
@@ -342,7 +343,7 @@ function get_stats_players() {
 
   }
 }
-add_action('get_stats_players', 'get_stats_players');
+add_action('get_stats_season', 'get_stats_season');
 
 function save_stats($table, $table_title) {
     global $wpdb;
@@ -429,9 +430,16 @@ function get_stats_match_teams($match, $current_week, $data) {
   if ($match[0]->home == 1) {
     $data_home['Team'] = 'Giants';
     $data_away['Team'] = $match[0]->rival;
+
+    $data_home['icon'] = 'giants-icon.png';
+    $data_away['icon'] = $match[0]->icon;
+
   } else {
     $data_home['Team'] = $match[0]->rival;
     $data_away['Team'] = 'Giants';
+
+    $data_home['icon'] = $match[0]->icon;
+    $data_away['icon'] = 'giants-icon.png';
   }
 
   $data_home['Week'] = $current_week;
@@ -651,6 +659,14 @@ function find_shortcut($rival) {
     $shorcut = 'LAC';
   }
 
+  if ($rival == 'Jets') {
+    $shorcut = 'NYJ';
+  }
+
+  if ($rival == 'Browns') {
+    $shorcut = 'CLE';
+  }
+
   return $shorcut;
 }
 
@@ -659,6 +675,8 @@ function get_stats_match_click() {
   $week = $_POST['week'];
 
   $stats = array();
+  $players_home = array();
+  $players_away = array();
 
   global $wpdb;
 
@@ -667,18 +685,52 @@ function get_stats_match_click() {
   if ($match[0]->home) {
     $stats_match_home = $wpdb->get_results("SELECT * FROM stats_match_teams WHERE Week LIKE $week AND Team LIKE 'Giants' ");
     $stats_match_away = $wpdb->get_results("SELECT * FROM stats_match_teams WHERE Week LIKE $week AND Team NOT LIKE 'Giants' ");
+
+    $stats_players_passing_home = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team LIKE 'Giants' AND `Type` LIKE 'Passing' ORDER BY cast(YDS as signed) DESC ");
+    $stats_players_rushing_home = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team LIKE 'Giants' AND `Type` LIKE 'Rushing' ORDER BY cast(YDS as signed) DESC");
+    $stats_players_receiving_home = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team LIKE 'Giants' AND `Type` LIKE 'Receiving' ORDER BY cast(YDS as signed) DESC");
+    $stats_players_defense_home = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team LIKE 'Giants' AND `Type` LIKE 'Defense' ");
+
+    $stats_players_passing_away = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team NOT LIKE 'Giants' AND `Type` LIKE 'Passing' ORDER BY cast(YDS as signed) DESC");
+    $stats_players_rushing_away = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team NOT LIKE 'Giants' AND `Type` LIKE 'Rushing' ORDER BY cast(YDS as signed) DESC");
+    $stats_players_receiving_away = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team NOT LIKE 'Giants' AND `Type` LIKE 'Receiving' ORDER BY cast(YDS as signed) DESC");
+    $stats_players_defense_away = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team NOT LIKE 'Giants' AND `Type` LIKE 'Defense' ");
   } else {
     $stats_match_home = $wpdb->get_results("SELECT * FROM stats_match_teams WHERE Week LIKE $week AND Team NOT LIKE 'Giants' ");
     $stats_match_away = $wpdb->get_results("SELECT * FROM stats_match_teams WHERE Week LIKE $week AND Team LIKE 'Giants' ");
+
+    $stats_players_passing_home = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team NOT LIKE 'Giants' AND `Type` LIKE 'Passing' ORDER BY cast(YDS as signed) DESC");
+    $stats_players_rushing_home = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team NOT LIKE 'Giants' AND `Type` LIKE 'Rushing' ORDER BY cast(YDS as signed) DESC");
+    $stats_players_receiving_home = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team NOT LIKE 'Giants' AND `Type` LIKE 'Receiving' ORDER BY cast(YDS as signed) DESC");
+    $stats_players_defense_home = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team NOT LIKE 'Giants' AND `Type` LIKE 'Defense' ");
+
+    $players_home['Passing'] = $stats_players_passing_home;
+    $players_home['Rushing'] = $stats_players_rushing_home;
+    $players_home['Receiving'] = $stats_players_receiving_home;
+    $players_home['Defense'] = $stats_players_defense_home;
+
+    $stats_players_passing_away = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team LIKE 'Giants' AND `Type` LIKE 'Passing' ORDER BY cast(YDS as signed) DESC");
+    $stats_players_rushing_away = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team LIKE 'Giants' AND `Type` LIKE 'Rushing' ORDER BY cast(YDS as signed) DESC");
+    $stats_players_receiving_away = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team LIKE 'Giants' AND `Type` LIKE 'Receiving' ORDER BY cast(YDS as signed) DESC");
+    $stats_players_defense_away = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week AND Team LIKE 'Giants' AND `Type` LIKE 'Defense' ");
   }
-
-  $stats_players = $wpdb->get_results("SELECT * FROM stats_match_players WHERE Week LIKE $week ");
-
-  $stats['match'] = $match;
 
   $stats['match_home'] = $stats_match_home;
   $stats['match_away'] = $stats_match_away;
-  $stats['players'] = $stats_players;
+
+  $players_home['Passing'] = $stats_players_passing_home;
+  $players_home['Rushing'] = $stats_players_rushing_home;
+  $players_home['Receiving'] = $stats_players_receiving_home;
+  $players_home['Defense'] = $stats_players_defense_home;
+
+  $players_away['Passing'] = $stats_players_passing_away;
+  $players_away['Rushing'] = $stats_players_rushing_away;
+  $players_away['Receiving'] = $stats_players_receiving_away;
+  $players_away['Defense'] = $stats_players_defense_away;
+
+
+  $stats['players_home'] = $players_home;
+  $stats['players_away'] = $players_away;
 
   echo json_encode($stats);
   die();

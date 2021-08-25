@@ -69,6 +69,10 @@ textarea{
     background: #00035F !important;
 }
 
+.table-players>tbody>tr>td, .table-players>tbody>tr>th, .table-players>tfoot>tr>td, .table-players>tfoot>tr>th, .table-players>thead>tr>td, .table-players>thead>tr>th {
+    padding: 9px;
+}
+
 
 @media screen and (min-width: 1200px) {
     .img-card-principal {
