@@ -26,7 +26,7 @@
                         <?php if ($match->score == '*') { ?>
                             <?php echo $match->date ?>
                         <?php } else { ?>
-                            <button type="button" class="btn btn-primary btn-sm btnStats">Stats</button>
+                            <button type="button" class="btn color-giants text-white btn-sm btnStats">Stats</button>
                         <?php } ?>
                     </td>
                 </tr>
@@ -180,7 +180,7 @@
                 </div>
             </div>
             <div class="modal-footer justify-content-center" style="border-top: 0 none;">
-                <button type="button" class="btn btn-primary btnClose">Cerrar</button>
+                <button type="button" class="btn color-giants text-white btnClose">Cerrar</button>
             </div>
         </div>
     </div>
@@ -196,7 +196,7 @@
                 <span>La información relacionada con este partido todavia no esta disponible, vuelve mas tarde.</span>
             </div>
             <div class="modal-footer justify-content-center" style="border-top: 0 none;">
-                <button type="button" class="btn btn-primary btnClose">Cerrar</button>
+                <button type="button" class="btn color-giants text-white btnClose">Cerrar</button>
             </div>
         </div>
     </div>
