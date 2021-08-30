@@ -6,6 +6,15 @@ Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-me
 Version: 1.0
 */
 
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #00035F;
+    border-radius: 4px;
+}
+
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Russo One', sans-serif;
 }
@@ -73,6 +82,14 @@ textarea{
     padding: 9px;
 }
 
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #00035F;
+    border-radius: 4px;
+}
 
 @media screen and (min-width: 1200px) {
     .img-card-principal {
