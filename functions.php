@@ -212,14 +212,7 @@ function get_schedule() {
 
   $current_week = (int) $result[0]->valor;
 
-  if ($current_week == 0 || $current_week == 1 || $current_week == 2) {
-    $schedule = $wpdb->get_results("SELECT * FROM `schedule` ORDER BY `week` LIMIT 4");
-  }
-  else if($current_week == 17) {
-    $schedule = $wpdb->get_results("SELECT * FROM `schedule` WHERE `week` IN (14,15,16,17) ORDER BY `week`");
-  } else {
-    $schedule = $wpdb->get_results("SELECT * FROM `schedule` WHERE `week` IN ($current_week-2, $current_week-1, $current_week, $current_week+1) ORDER BY `week`");
-  }
+  $schedule = $wpdb->get_results("SELECT * FROM `schedule` ORDER BY `week`");
 
   return $schedule;
 }
@@ -737,5 +730,18 @@ function get_stats_match_click() {
 }
 add_action('wp_ajax_get_stats_match_click', 'get_stats_match_click');
 add_action('wp_ajax_nopriv_get_stats_match_click', 'get_stats_match_click');
+
+function get_current_week() {
+
+  global $wpdb;
+
+  $result = $wpdb->get_results("SELECT `valor` FROM `params` WHERE `clave` LIKE 'currentWeek' ");
+  $current_week = (int) $result[0]->valor;
+
+  echo json_encode($current_week);
+  die();
+}
+add_action('wp_ajax_get_current_week', 'get_current_week');
+add_action('wp_ajax_nopriv_get_current_week', 'get_current_week');
 
 ?>

@@ -91,6 +91,29 @@ textarea{
     border-radius: 4px;
 }
 
+.scrollable {
+    overflow: auto;
+    height: 250px;
+}
+.scrollable thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+*:focus {
+    outline: none;
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background: #00035F;
+    border-radius: 4px;
+}
+
 @media screen and (min-width: 1200px) {
     .img-card-principal {
         max-width: 100%;

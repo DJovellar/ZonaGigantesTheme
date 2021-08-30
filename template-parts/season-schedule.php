@@ -5,34 +5,37 @@
 
 <h5 class="text-center">Proximos partidos</h5>
 <hr>
-<table class="table table-borderless">
-    <thead class="thead-dark font-title text-center">
-    <tr>
-        <th scope="col" style="background-color: #00035F;">Rival</th>
-        <th scope="col" class="text-center" style="background-color: #00035F;">Resultado</th>
-        <th scope="col" class="text-center" style="background-color: #00035F;">Fecha</th>
-    </tr>
-    </thead>
-    <tbody class="font-text font-size-min">
-        <?php
-            foreach($schedule as $match) { ?>
-                <tr>
-                    <td>
-                        <img src="<?php bloginfo('template_url');?>/images/icon-teams/<?php echo $match->icon ?>" class="img-fluid table-row-custom" width="25" height="25">
-                        <span class="pl-1"><?php echo $match->rival ?></span>
-                    </td>
-                    <td class="text-center"><?php echo $match->score ?></td>
-                    <td class="text-center">
-                        <?php if ($match->score == '*') { ?>
-                            <?php echo $match->date ?>
-                        <?php } else { ?>
-                            <button type="button" class="btn color-giants text-white btn-sm btnStats">Stats</button>
-                        <?php } ?>
-                    </td>
-                </tr>
-        <?php } ?>
-    </tbody>
-</table>
+
+<div class="scrollable">
+    <table class="table table-borderless" id="table_schedule">
+        <thead class="thead-dark font-title text-center">
+        <tr>
+            <th scope="col" style="background-color: #00035F;">Rival</th>
+            <th scope="col" class="text-center" style="background-color: #00035F;">Resultado</th>
+            <th scope="col" class="text-center" style="background-color: #00035F;">Fecha</th>
+        </tr>
+        </thead>
+        <tbody class="font-text font-size-min prova">
+            <?php
+                foreach($schedule as $match) { ?>
+                    <tr tabindex=0>
+                        <td>
+                            <img src="<?php bloginfo('template_url');?>/images/icon-teams/<?php echo $match->icon ?>" class="img-fluid table-row-custom" width="25" height="25">
+                            <span class="pl-1"><?php echo $match->rival ?></span>
+                        </td>
+                        <td class="text-center"><?php echo $match->score ?></td>
+                        <td class="text-center">
+                            <?php if ($match->score == '*') { ?>
+                                <?php echo $match->date ?>
+                            <?php } else { ?>
+                                <button type="button" class="btn color-giants text-white btn-sm btnStats">Stats</button>
+                            <?php } ?>
+                        </td>
+                    </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+</div>
 
 
 <div class="modal fade" id="matchModal">
@@ -206,6 +209,8 @@
 <script>
     jQuery(document).ready(function($) {
 
+        focus_week();
+
         var week;
         $('.btnStats').on('click', function() {
             var index = $(this).closest('tr').index();
@@ -251,6 +256,28 @@
                 }
             });
         });
+
+        function focus_week() {
+            var params = {
+                'action': 'get_current_week'
+            };
+
+            var url = '<?php echo admin_url('admin-ajax.php'); ?>';
+
+            jQuery.post(url, params, function (response) {
+                var result = JSON.parse(response);
+
+                var position = result - 4;
+                if (position < 0) {
+                    //No hacemos nada, es para evitar la excepcion (no existe el row al realizar la resta)
+                } else {
+                    var container = $(".scrollable")[0];
+                    var row = $("#table_schedule tbody tr")[position];
+
+                    container.scrollTop = row.offsetTop;
+                }
+            });
+        }
 
         function load_stats_teams(stats_home, stats_away) {
             $.each(stats_home, function(key, value) {
