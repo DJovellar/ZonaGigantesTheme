@@ -156,6 +156,8 @@ function update_current_week() {
 }
 add_action('update_week', 'update_current_week');
 
+/* Deprecated -> Lllegan mal los resultados del partido, se obtiene el resultado al obtener las stats del partido */
+
 function update_schedule_NYG() {
   global $wpdb;
 
@@ -203,15 +205,10 @@ function update_schedule_NYG() {
     }
   }
 }
-add_action('update_schedule', 'update_schedule_NYG');
+//add_action('update_schedule', 'update_schedule_NYG');
 
 function get_schedule() {
   global $wpdb;
-
-  $result = $wpdb->get_results("SELECT `valor` FROM `params` WHERE `clave` LIKE 'currentWeek' ");
-
-  $current_week = (int) $result[0]->valor;
-
   $schedule = $wpdb->get_results("SELECT * FROM `schedule` ORDER BY `week`");
 
   return $schedule;
@@ -401,12 +398,13 @@ function get_stats_match() {
     $html = file_get_html($url);
 
     if ($html != null) {
-      $stats_teams_match = $html->find('.team-stats', 0);
-      $stats_players_match = $html->find('.player-stats-container', 0);
+      if (get_match_score($html, $current_week, $match)) {
+        $stats_teams_match = $html->find('.team-stats', 0);
+        $stats_players_match = $html->find('.player-stats-container', 0);
 
-      get_stats_match_teams($match, $current_week, $stats_teams_match);
-      get_stats_match_players($match, $current_week, $stats_players_match);
-
+        get_stats_match_teams($match, $current_week, $stats_teams_match);
+        get_stats_match_players($match, $current_week, $stats_players_match);
+      }
     } else {
       write_log("get_stats_match:: The url: '{$url}' of the mach is wrong");
     }
@@ -415,6 +413,60 @@ function get_stats_match() {
   }
 }
 add_action('get_stats_match', 'get_stats_match');
+
+function get_match_score($html, $current_week, $match) {
+  global $wpdb;
+
+  if ($match[0]->score != '*') {
+    write_log("get_match_score:: The score of match in the Week {$current_week} is updated");
+    return false;
+  } else {
+    $score_home = $html->find('.team-score-container', 0);
+    $score_away = $html->find('.team-score-container', 1);
+
+    if ($score_home == null || $score_away == null) {
+      write_log("get_stats_match:: The match in the Week {$current_week} not played yet");
+      return false;
+    } else {
+      $points_home = $score_home->children(0)->plaintext;
+      $points_away = $score_away->children(0)->plaintext;
+
+      $score_match = $points_home.'-'.$points_away;
+
+      $points_home = intval($points_home);
+      $points_away = intval($points_away);
+
+      if ($match[0]->home == 1) {
+        if (($points_home - $points_away) > 0) {
+          $score_match = $score_match.' W';
+        } else if (($points_home - $points_away) < 0) {
+          $score_match = $score_match.' L';
+        } else {
+          $score_match = $score_match.' T';
+        }
+      } else {
+        if (($points_home - $points_away) > 0) {
+          $score_match = $score_match.' L';
+        } else if (($points_home - $points_away) < 0) {
+          $score_match = $score_match.' W';
+        } else {
+          $score_match = $score_match.' T';
+        }
+      }
+
+      $wpdb->update('schedule',
+      array(
+        'score' => $score_match
+      ),
+      array(
+        'week' => (int) $current_week
+      ));
+
+      return true;
+    }
+  }
+
+}
 
 function get_stats_match_teams($match, $current_week, $data) {
   $data_home = array();
