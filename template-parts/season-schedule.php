@@ -130,24 +130,24 @@
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="away">
                         <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-sm-12 text-center">
-                                <h5>Pase</h5>
+                            <div class="col-xl-6 col-lg-6 col-sm-12 pl-xl-5 pl-lg-5 text-center">
+                                <h5> Pase</h5>
                                 <table class="table table-players" id="passTable_away">
                                 </table>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-sm-12  text-center">
+                            <div class="col-xl-6 col-lg-6 col-sm-12 pr-xl-5 pr-lg-5 text-center">
                                 <h5>Carrera</h5>
                                 <table class="table table-players" id="rushTable_away">
                                 </table>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-sm-12 text-center">
+                        <div class="row pt-3">
+                            <div class="col-xl-6 col-lg-6 col-sm-12 pl-xl-5 pl-lg-5 text-center">
                                 <h5>Recepciones</h5>
                                 <table class="table table-players" id="receivingTable_away">
                                 </table>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-sm-12 text-center">
+                            <div class="col-xl-6 col-lg-6 col-sm-12 pr-xl-5 pr-lg-5 text-center">
                                 <h5>Defensa</h5>
                                 <table class="table table-players" id="defenseTable_away">
                                 </table>
@@ -156,24 +156,24 @@
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="home">
                         <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-sm-12 text-center">
+                            <div class="col-xl-6 col-lg-6 col-sm-12 pl-xl-5 pl-lg-5 text-center">
                                 <h5>Pase</h5>
                                 <table class="table table-players" id="passTable_home">
                                 </table>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-sm-12 text-center">
+                            <div class="col-xl-6 col-lg-6 col-sm-12 pr-xl-5 pr-lg-5 text-center">
                                 <h5>Carrera</h5>
                                 <table class="table table-players" id="rushTable_home">
                                 </table>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-sm-12 text-center">
+                        <div class="row pt-3">
+                            <div class="col-xl-6 col-lg-6 col-sm-12 pl-xl-5 pl-lg-5 text-center">
                                 <h5>Recepciones</h5>
                                 <table class="table table-players" id="receivingTable_home">
                                 </table>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-sm-12 text-center">
+                            <div class="col-xl-6 col-lg-6 col-sm-12 pr-xl-5 pr-lg-5 text-center">
                                 <h5>Defensa</h5>
                                 <table class="table table-players" id="defenseTable_home">
                                 </table>
@@ -287,6 +287,19 @@
                 } else {
                     if (key == 'RED ZONE EFF.') {
                         value = value.slice(0,3);
+                        value = value.replace(/\-/g, ' / ');
+                    }
+
+                    if (key == '3RD DOWN CONV') {
+                        value = value.replace(/\-/g, ' / ');
+                    }
+
+                    if (key == '4TH DOWN CONV') {
+                        value = value.replace(/\-/g, ' / ');
+                    }
+
+                    if (key == 'PENALTIES - YARDS') {
+                        value = value.replace(/\-/g, ' - ');
                     }
 
                     var key_aux = key.replace(/\s+/g, '-');
@@ -304,6 +317,19 @@
                 } else {
                     if (key == 'RED ZONE EFF.') {
                         value = value.slice(0,3);
+                        value = value.replace(/\-/g, ' / ');
+                    }
+
+                    if (key == '3RD DOWN CONV') {
+                        value = value.replace(/\-/g, ' / ');
+                    }
+
+                    if (key == '4TH DOWN CONV') {
+                        value = value.replace(/\-/g, ' / ');
+                    }
+
+                    if (key == 'PENALTIES - YARDS') {
+                        value = value.replace(/\-/g, ' - ');
                     }
 
                     var key_aux = key.replace(/\s+/g, '-');
@@ -334,12 +360,12 @@
             var row_header = header.insertRow(0);
 
             var cell = row_header.insertCell(-1);
-            cell.innerHTML = 'JUGADOR';
+            cell.innerHTML = 'Jugador';
             cell.style.textAlign = "center";
             cell.style.fontWeight = "bold";
 
             cell = row_header.insertCell(-1);
-            cell.innerHTML = 'ATT/COMP';
+            cell.innerHTML = 'INT/COMP';
             cell.style.textAlign = "center";
             cell.style.fontWeight = "bold";
 
@@ -403,7 +429,7 @@
             row_header = header.insertRow(0);
 
             cell = row_header.insertCell(-1);
-            cell.innerHTML = 'JUGADOR';
+            cell.innerHTML = 'Jugador';
             cell.style.textAlign = "center";
             cell.style.fontWeight = "bold";
 
@@ -472,7 +498,7 @@
             row_header = header.insertRow(0);
 
             cell = row_header.insertCell(-1);
-            cell.innerHTML = 'JUGADOR';
+            cell.innerHTML = 'Jugador';
             cell.style.textAlign = "center";
             cell.style.fontWeight = "bold";
 
@@ -551,7 +577,7 @@
             row_header = header.insertRow(0);
 
             cell = row_header.insertCell(-1);
-            cell.innerHTML = 'JUGADOR';
+            cell.innerHTML = 'Jugador';
             cell.style.textAlign = "center";
             cell.style.fontWeight = "bold";
 
