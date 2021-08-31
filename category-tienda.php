@@ -20,7 +20,7 @@
 
     <title> Zona Gigantes </title>
   </head>
-  <body>
+  <body class="bg-light">
     <header class="font-title">
       <div class="pt-4 pb-1 container">
           <span class="container text-logo">Giants en español</span>

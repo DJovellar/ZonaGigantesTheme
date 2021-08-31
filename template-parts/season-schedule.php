@@ -40,7 +40,7 @@
 
 <div class="modal fade" id="matchModal">
     <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
-        <div class="modal-content" style="max-height: 947px;">
+        <div class="modal-content bg-light" style="max-height: 947px;">
             <div class="modal-header justify-content-center">
                 <h2 class="modal-title" id="postModalLabel"><span class="Team_home"></span> vs <span class="Team_away"></span></h2>
             </div>
