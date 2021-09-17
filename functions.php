@@ -304,7 +304,7 @@ function get_last_videos() {
 function get_stats_season() {
   require_once('simple_html_dom.php');
 
-  $html = file_get_html('https://www.giants.com/team/stats/2020/REG');
+  $html = file_get_html('https://www.giants.com/team/stats/2021/REG');
   $tables = $html->find('.nfl-o-teamstats');
 
   foreach($tables as $table) {

@@ -67,7 +67,7 @@
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-4 text-center font-text-stats-match NET-YARDS-PASSING_away"></div>
+                                <div class="col-4 text-center font-text-stats-match NET-YARDS-PASSING_home"></div>
                                 <div class="col-4 text-center font-text-stats-match font-weight-bold">Yardas de pase</div>
                                 <div class="col-4 text-center font-text-stats-match NET-YARDS-PASSING_away"></div>
                             </div>
