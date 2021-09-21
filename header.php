@@ -26,7 +26,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark container position-relative">
             <a class="navbar-brand position-absolute" href="<?php echo esc_url(home_url('/')) ?>">
               <img src="<?php bloginfo('template_url');?>/images/other-icons/logo-zonaGigantes.png" width="140" height="140" class="img-fluid" alt="Icono Zona Gigantes" loading="lazy">
-              <span class="navbar-brand pl-3 hide-name">Zona Gigantes</span> 
+              <span class="navbar-brand pl-3 hide-name">Zona Gigantes</span>
             </a>
             <div class=""></div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
@@ -64,7 +64,7 @@
                 <a href="https://www.youtube.com/channel/UC9MUffNRPYDd3S2JlVXpBlw" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/youtube-icon.png" width="32" height="32"></img></a>
               </div>
               <div class="col-2">
-                <a href="https://www.twitch.tv/zonagigantes" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/twitch-icon.png" width="24" height="24"></img></a>
+                <a href="https://www.twitch.tv/amanecenewyork" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/twitch-icon.png" width="24" height="24"></img></a>
               </div>
               <div class="col-2">
                 <a href="https://t.me/zonagigantes" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/telegram-icon.png" width="28" height="28"></img></a>
