@@ -55,22 +55,22 @@
           <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 pt-3 pt-sm-0 pt-md-0 pt-lg-0 pt-xl-0">
             <div class="row">
               <div class="col-2">
-                <a href="https://twitter.com/zonagigantes" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/icon-twitter.png" width="25" height="20"></img></a>
+                <a href="https://twitter.com/zonagigantes" target="_blank" rel="nofollow"><img src="<?php bloginfo('template_url');?>/images/other-icons/icon-twitter.png" width="25" height="20"></img></a>
               </div>
               <div class="col-2">
-                <a href="https://www.instagram.com/zonagigantes_/" target="_blank"><img src="<?php bloginfo('template_url');?>/images//other-icons/logo-instagram.png" width="25" height="25"></img></a>
+                <a href="https://www.instagram.com/zonagigantes_/" target="_blank" rel="nofollow"><img src="<?php bloginfo('template_url');?>/images//other-icons/logo-instagram.png" width="25" height="25"></img></a>
               </div>
               <div class="col-2">
-                <a href="https://www.facebook.com/ZonaGigantes1/" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/icon-facebook.png" width="25" height="25"></img></a>
+                <a href="https://www.facebook.com/ZonaGigantes1/" target="_blank" rel="nofollow"><img src="<?php bloginfo('template_url');?>/images/other-icons/icon-facebook.png" width="25" height="25"></img></a>
               </div>
               <div class="col-2">
-                <a href="https://www.youtube.com/channel/UC9MUffNRPYDd3S2JlVXpBlw" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/youtube-icon.png" width="32" height="32"></img></a>
+                <a href="https://www.youtube.com/channel/UC9MUffNRPYDd3S2JlVXpBlw" target="_blank" rel="nofollow"><img src="<?php bloginfo('template_url');?>/images/other-icons/youtube-icon.png" width="32" height="32"></img></a>
               </div>
               <div class="col-2">
-                <a href="https://www.twitch.tv/amanecenewyork" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/twitch-icon.png" width="24" height="24"></img></a>
+                <a href="https://www.twitch.tv/amanecenewyork" target="_blank" rel="nofollow"><img src="<?php bloginfo('template_url');?>/images/other-icons/twitch-icon.png" width="24" height="24"></img></a>
               </div>
               <div class="col-2">
-                <a href="https://t.me/zonagigantes" target="_blank"><img src="<?php bloginfo('template_url');?>/images/other-icons/telegram-icon.png" width="28" height="28"></img></a>
+                <a href="https://t.me/zonagigantes" target="_blank" rel="nofollow"><img src="<?php bloginfo('template_url');?>/images/other-icons/telegram-icon.png" width="28" height="28"></img></a>
               </div>
             </div>
           </div>
