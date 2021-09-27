@@ -1,13 +1,34 @@
 <?php wp_head() ?>
 
-<?php get_header() ?>
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="7w-hYvGG0S9p67FeGXIgiq3V74CpBia8YdDrs2Yusak" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/style.css?ver=<?php echo rand(111,999)?>">
+
+    <!-- Icono en el navegador -->
+    <link rel="icon" href="<?php bloginfo('template_url');?>/images/other-icons/favicon.ico" />
+
+    <title> <?php the_title() ?> | Zona Gigantes </title>
+  </head>
+  <body>
+
+    <?php get_template_part( '/template-parts/navbar', null); ?>
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="container pt-5">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="text-center">
-                        <h2><?php the_title() ?></h2>
+                        <h1><?php the_title() ?></h1>
                         <hr>
                         <?php if (has_post_thumbnail()) the_post_thumbnail('post-thumbnails', array( 'class' => 'img-fluid w-100' )) ?>
                     </div>

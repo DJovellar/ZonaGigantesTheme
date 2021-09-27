@@ -3,7 +3,7 @@
     $schedule = get_schedule();
 ?>
 
-<h5 class="text-center">Proximos partidos</h5>
+<h2 class="text-center" style="font-size: 1.3rem;">Calendario</h2>
 <hr>
 
 <div class="scrollable">
@@ -42,7 +42,7 @@
     <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
         <div class="modal-content bg-light" style="max-height: 947px;">
             <div class="modal-header justify-content-center">
-                <h2 class="modal-title" id="postModalLabel"><span class="Team_home"></span> vs <span class="Team_away"></span></h2>
+                <span class="modal-title font-title" id="postModalLabel" style="font-size: 2rem;"><span class="Team_home"></span> vs <span class="Team_away"></span></span>
             </div>
             <div class="modal-body pt-1">
                 <nav class="nav nav-pills flex-column flex-sm-row">
@@ -131,24 +131,24 @@
                     <div role="tabpanel" class="tab-pane fade" id="away">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-sm-12 pl-xl-5 pl-lg-5 text-center">
-                                <h5> Pase</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Pase</span>
                                 <table class="table table-players" id="passTable_away">
                                 </table>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-sm-12 pr-xl-5 pr-lg-5 text-center">
-                                <h5>Carrera</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Carrera</span>
                                 <table class="table table-players" id="rushTable_away">
                                 </table>
                             </div>
                         </div>
                         <div class="row pt-3">
                             <div class="col-xl-6 col-lg-6 col-sm-12 pl-xl-5 pl-lg-5 text-center">
-                                <h5>Recepciones</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Recepciones</span>
                                 <table class="table table-players" id="receivingTable_away">
                                 </table>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-sm-12 pr-xl-5 pr-lg-5 text-center">
-                                <h5>Defensa</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Defensa</span>
                                 <table class="table table-players" id="defenseTable_away">
                                 </table>
                             </div>
@@ -157,24 +157,24 @@
                     <div role="tabpanel" class="tab-pane fade" id="home">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-sm-12 pl-xl-5 pl-lg-5 text-center">
-                                <h5>Pase</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Pase</span>
                                 <table class="table table-players" id="passTable_home">
                                 </table>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-sm-12 pr-xl-5 pr-lg-5 text-center">
-                                <h5>Carrera</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Carrera</span>
                                 <table class="table table-players" id="rushTable_home">
                                 </table>
                             </div>
                         </div>
                         <div class="row pt-3">
                             <div class="col-xl-6 col-lg-6 col-sm-12 pl-xl-5 pl-lg-5 text-center">
-                                <h5>Recepciones</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Recepciones</span>
                                 <table class="table table-players" id="receivingTable_home">
                                 </table>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-sm-12 pr-xl-5 pr-lg-5 text-center">
-                                <h5>Defensa</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Defensa</span>
                                 <table class="table table-players" id="defenseTable_home">
                                 </table>
                             </div>
@@ -193,7 +193,7 @@
     <div class="modal-dialog modal modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header justify-content-center">
-                <h5 class="modal-title" id="postModalLabel">Info</h5>
+                <span class="modal-title font-title" style="font-size: 1.4rem;" id="postModalLabel">Info</span>
             </div>
             <div class="modal-body text-center">
                 <span>La información relacionada con este partido todavia no esta disponible, vuelve mas tarde.</span>

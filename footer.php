@@ -13,27 +13,27 @@
                     <span class="navbar-brand pl-3 font-title pt-2">Zona Gigantes</span>
                 </div>
                 <div class="col-lg-4 col-xl-4 pl-4 pt-4 pt-sm-3 pt-md-3 text-center">
-                    <h4>Siguenos</h4>
+                    <span class="font-title navbar-brand">Siguenos</span>
                     <ul class="list-group footer-social">
-                        <a href="https://twitter.com/zonagigantes" target="_blank" class="pt-1 text-decoration-none text-black-50">
+                        <a href="https://twitter.com/zonagigantes" target="_blank" rel="nofollow" class="pt-1 text-decoration-none text-black-50">
                             <li class="list-group-item py-1">
                                 <img src="<?php bloginfo('template_url');?>/images/other-icons/icon-twitter.png" width="40" height="30"></img>
                                 <span class="pl-3">Twitter</span>
                             </li>
                         </a>
-                        <a href="https://www.instagram.com/zonagigantes_/" target="_blank" class="pt-2 text-decoration-none text-black-50">
+                        <a href="https://www.instagram.com/zonagigantes_/" target="_blank" rel="nofollow" class="pt-2 text-decoration-none text-black-50">
                             <li class="list-group-item py-1">
                                 <img src="<?php bloginfo('template_url');?>/images/other-icons/logo-instagram.png" width="40" height="30"></img>
                                 <span class="pl-3">Instagram</span>
                             </li>
                         </a>
-                        <a href="https://www.facebook.com/ZonaGigantes1/" target="_blank" class="pt-2 text-decoration-none text-black-50">
+                        <a href="https://www.facebook.com/ZonaGigantes1/" target="_blank" rel="nofollow" class="pt-2 text-decoration-none text-black-50">
                             <li class="list-group-item py-1">
                                 <img src="<?php bloginfo('template_url');?>/images/other-icons/icon-facebook.png" width="40" height="30"></img>
                                 <span class="pl-3">Facebook</span>
                             </li>
                         </a>
-                        <a href="https://www.youtube.com/channel/UC9MUffNRPYDd3S2JlVXpBlw" target="_blank" class="pt-2 text-decoration-none text-black-50">
+                        <a href="https://www.youtube.com/channel/UC9MUffNRPYDd3S2JlVXpBlw" target="_blank" rel="nofollow" class="pt-2 text-decoration-none text-black-50">
                             <li class="list-group-item py-1">
                                 <img src="<?php bloginfo('template_url');?>/images/other-icons/youtube-icon.png" width="40" height="30"></img>
                                 <span class="pl-3">Youtube</span>
@@ -42,12 +42,14 @@
                     </ul>
                 </div>
                 <div class="col-lg-4 col-xl-4 pl-lg-5 pl-xl-5 pt-4 pt-sm-4 pt-md-4 pt-lg-3 pt-xl-3">
-                    <h4 class="text-center">Secciones</h4>
+                    <span class="font-title navbar-brand w-100 text-center"> Secciones</span>
                     <ul class="list-unstyled footer-social">
-                        <li class="text-center" style="padding: 10px;"><a href="<?php echo esc_url( get_category_link('3') ); ?>" class="text-decoration-none text-white">Noticias</a></li>
-                        <li class="text-center" style="padding: 10px;"><a href="<?php echo esc_url( get_category_link('4') ); ?>" class="text-decoration-none text-white">Crónicas</a></li>
-                        <li class="text-center" style="padding: 10px;"><a href="<?php echo esc_url( get_category_link('5') ); ?>" class="text-decoration-none text-white">Videos</a></li>
-                        <li class="text-center" style="padding: 10px;"><a href="<?php echo esc_url( get_category_link('3') ); ?>" class="text-decoration-none text-white">Contacto</a></li>
+                        <li class="text-center" style="padding: 3px;"><a href="<?php echo esc_url( get_category_link(get_cat_ID('noticias')) ); ?>" class="text-decoration-none text-white">Noticias</a></li>
+                        <li class="text-center" style="padding: 3px;"><a href="<?php echo esc_url( get_category_link(get_cat_ID('cronicas')) ); ?>" class="text-decoration-none text-white">Crónicas</a></li>
+                        <li class="text-center" style="padding: 3px;"><a href="<?php echo esc_url( get_category_link(get_cat_ID('videos')) ); ?>" class="text-decoration-none text-white">Videos</a></li>
+                        <li class="text-center" style="padding: 3px;"><a href="<?php echo esc_url( get_category_link(get_cat_ID('equipo')) ); ?>" class="text-decoration-none text-white">Equipo</a></li>
+                        <li class="text-center" style="padding: 3px;"><a href="<?php echo esc_url( get_category_link(get_cat_ID('tienda')) ); ?>" class="text-decoration-none text-white" rel="nofollow">Tienda</a></li>
+                        <li class="text-center" style="padding: 3px;"><a href="<?php echo esc_url( get_category_link(get_cat_ID('contacto')) ); ?>" class="text-decoration-none text-white" rel="nofollow">Contacto</a></li>
                     </ul>
 
                 </div>

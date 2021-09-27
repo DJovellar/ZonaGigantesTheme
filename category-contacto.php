@@ -1,13 +1,38 @@
 
 <?php wp_head() ?>
-<?php get_header() ?>
+<?php wp_head() ?>
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="7w-hYvGG0S9p67FeGXIgiq3V74CpBia8YdDrs2Yusak" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/style.css?ver=<?php echo rand(111,999)?>">
+
+    <!-- Icono en el navegador -->
+    <link rel="icon" href="<?php bloginfo('template_url');?>/images/other-icons/favicon.ico" />
+
+    <meta name="robots" content="noindex">
+
+    <title>Contacto | Zona Gigantes</title>
+  </head>
+  <body>
+
+    <?php get_template_part( '/template-parts/navbar', null); ?>
 
      <div class="container pt-5 font-text">
-            <h2>Contacto</h2>
+            <h1 style="font-size: 2.3rem;">Contacto</h1>
             <hr>
-            <p>Si quieres ponerte en contacto con nosotros puedes escribirnos a <b>info@zonagigantes.com</b> o contactarnos a través de las redes sociales.</p>
+            <p>Si quieres ponerte en contacto con nosotros puedes escribirnos a <b>info@zonagigantes.com</b> o contactarnos a través de nuestras redes sociales.</p>
 
-            <h2 class="pt-5">¿Quienes somos?</h2>
+            <h2 class="pt-4" style="font-size: 2.3rem;">¿Quienes somos?</h2>
             <hr>
 
             <div class="row">
