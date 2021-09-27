@@ -250,7 +250,7 @@ function save_all_videos() {
       $last_id = 0;
     }
 
-    $iframe = '<iframe src="https://www.youtube.com/embed/'.$result->items[$i]->id->videoId.'" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
+    $iframe = '<iframe loading="lazy" src="https://www.youtube.com/embed/'.$result->items[$i]->id->videoId.'" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
 
     $wpdb->insert('videos',
       array(
@@ -279,7 +279,7 @@ function save_new_videos() {
       $last_id = 0;
     }
 
-    $iframe = '<iframe src="https://www.youtube.com/embed/'.$result->items[$i]->id->videoId.'" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
+    $iframe = '<iframe loading="lazy" src="https://www.youtube.com/embed/'.$result->items[$i]->id->videoId.'" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
 
     $wpdb->insert('videos',
       array(
