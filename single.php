@@ -24,7 +24,7 @@
     <?php get_template_part( '/template-parts/navbar', null); ?>
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <div class="container pt-5">
+        <div class="container pt-5 pb-5">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="text-center">
@@ -49,7 +49,67 @@
                         <?php the_content() ?>
                     </div>
 
-                    <div id="comments-container">
+                    <div class="pt-3 pb-3">
+                        <p class="font-weight-bold font-text">Si te ha gustado este articulo, igual tambien te gustan los siguientes:</p>
+                        <div class="row">
+                            <?php
+                                $post_title = get_the_title($ID);
+                                $category = get_the_category()[0]->cat_ID;
+
+                                $posts = new WP_Query(array(
+                                'cat' => $category,
+                                'posts_per_page' => 3,
+                                ));
+
+                                $posts_aux = $posts->posts;
+
+                                foreach($posts_aux as $index=>$post_aux) {
+                                    if ($post_aux->post_title == $post_title) {
+                                        if ($index == 0) {
+                                            $posts = new WP_Query(array(
+                                                'cat' => $category,
+                                                'posts_per_page' => 3,
+                                                'offset' => 1
+                                            ));
+                                        } else if ($index == 1) {
+                                            $posts1 = new WP_Query(array(
+                                                'cat' => $category,
+                                                'posts_per_page' => 1
+                                            ));
+                                            $posts2 = new WP_Query(array(
+                                                'cat' => $category,
+                                                'posts_per_page' => 2,
+                                                'offset' => 2
+                                            ));
+                                            $posts->posts = array_merge($posts1->posts, $posts2->posts);
+                                        } else if ($index == 2) {
+                                            $posts1 = new WP_Query(array(
+                                                'cat' => $category,
+                                                'posts_per_page' => 2
+                                            ));
+                                            $posts2 = new WP_Query(array(
+                                                'cat' => $category,
+                                                'posts_per_page' => 1,
+                                                'offset' => 3
+                                            ));
+                                            $posts->posts = array_merge($posts1->posts, $posts2->posts);
+                                        }
+                                    }
+                                }
+
+                                if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                    <?php
+                                    $wp_query->get_post();
+                                    $args = array( 'class' => 'card-img-top img-card-secondary' );
+                                    get_template_part( '/template-parts/card', 'interlinking', $args );
+                                    ?>
+                                </div>
+                            <?php endwhile; endif; ?>
+                        </div>
+                    </div>
+
+                    <div id="comments-container pt-5">
                         <?php
                             // If comments are open or we have at least one comment, load up the comment template.
 				            if ( comments_open() || get_comments_number() ) {

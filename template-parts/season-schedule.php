@@ -274,7 +274,7 @@
                     var container = $(".scrollable")[0];
                     var row = $("#table_schedule tbody tr")[position];
 
-                    container.scrollTop = row.offsetTop;
+                    container.scrollTop = row.offsetTop + 10;
                 }
             });
         }

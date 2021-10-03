@@ -29,11 +29,11 @@
       <div class="row no-gutters">
         <?php
           $posts = new WP_Query(array(
-            'cat' => '3',
+            'cat' => get_cat_ID('noticias'),
             'posts_per_page' => 2,
           ));
           if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
-              <div class="col-12 com-sm-12 col-md-12 col-lg-6 col-xl-6">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <?php
                   $args = array( 'class' => 'card-img-top img-card-principal');
                   get_template_part( '/template-parts/card', null, $args );
@@ -44,7 +44,7 @@
       <div class="row no-gutters">
         <?php
             $posts = new WP_Query(array(
-              'cat' => '3',
+              'cat' => get_cat_ID('noticias'),
               'posts_per_page' => 3,
               'offset' => 2,
             ));
@@ -76,7 +76,7 @@
       <div class="row no-gutters">
         <?php
           $posts = new WP_Query(array(
-            'cat' => '4',
+            'cat' => get_cat_ID('crónicas'),
             'posts_per_page' => 1,
           ));
           if ($posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
@@ -91,7 +91,7 @@
       <div class="row no-gutters">
         <?php
           $posts = new WP_Query(array(
-            'cat' => '4',
+            'cat' => get_cat_ID('crónicas'),
             'posts_per_page' => 2,
             'offset' => 1,
           ));
