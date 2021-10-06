@@ -19,8 +19,6 @@
     <!-- Icono en el navegador -->
     <link rel="icon" href="<?php bloginfo('template_url');?>/images/other-icons/favicon.ico" />
 
-    <meta name="robots" content="noindex">
-
     <title>Contacto | Zona Gigantes</title>
   </head>
   <body>

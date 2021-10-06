@@ -19,6 +19,9 @@
     <!-- Icono en el navegador -->
     <link rel="icon" href="<?php bloginfo('template_url');?>/images/other-icons/favicon.ico" />
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5587252274862258"
+        crossorigin="anonymous"></script>
+
     <title>Noticias de los New York Giants (NFL) | Zona Gigantes</title>
   </head>
   <body>
