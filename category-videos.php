@@ -19,7 +19,7 @@
     <!-- Icono en el navegador -->
     <link rel="icon" href="<?php bloginfo('template_url');?>/images/other-icons/favicon.ico" />
 
-    <title>Videos sobre los New York Giants | Zona Gigantes</title>
+    <title>Videos de los New York Giants | Zona Gigantes</title>
   </head>
   <body>
 
@@ -40,7 +40,7 @@
 ?>
 
 <div class="container pt-5">
-    <h1 style="font-size: 2.3rem;">Videos sobre los New York Giants</h1>
+    <h1 style="font-size: 2.3rem;">Videos de los New York Giants</h1>
     <hr>
     <?php
         foreach($videos as $video) {

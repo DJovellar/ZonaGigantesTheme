@@ -19,14 +19,14 @@
     <!-- Icono en el navegador -->
     <link rel="icon" href="<?php bloginfo('template_url');?>/images/other-icons/favicon.ico" />
 
-    <title>Crónicas de partido de los New York Giants | Zona Gigantes</title>
+    <title>Crónicas los New York Giants | Zona Gigantes</title>
   </head>
   <body>
 
     <?php get_template_part( '/template-parts/navbar', null); ?>
 
 <div class="container pt-5">
-    <h1 style="font-size: 2.3rem;">Crónicas de partido de los New York Giants</h1>
+    <h1 style="font-size: 2.3rem;">Crónicas de los New York Giants</h1>
     <hr>
     <?php
         if (have_posts() ) : while ( have_posts() ) : the_post(); ?>

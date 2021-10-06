@@ -17,7 +17,7 @@
     <!-- Icono en el navegador -->
     <link rel="icon" href="<?php bloginfo('template_url');?>/images/other-icons/favicon.ico" />
 
-    <title>Zona Gigantes | Información de los New York Giants (NFL) en Español</title>
+    <title>Zona Gigantes | Información de los NY Giants (NFL) en Español</title>
   </head>
   <body>
 
