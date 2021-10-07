@@ -18,7 +18,17 @@
     <!-- Icono en el navegador -->
     <link rel="icon" href="<?php bloginfo('template_url');?>/images/other-icons/favicon.ico" />
 
-    <title>Estadísticas de los New York Giants | Zona Gigantes</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177599573-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-177599573-1');
+    </script>
+
+    <title><?php wp_head() ?> | Zona Gigantes</title>
   </head>
   <body>
 
