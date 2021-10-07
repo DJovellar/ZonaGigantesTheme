@@ -66,7 +66,7 @@
                         <p class="font-weight-bold font-text">Si te ha gustado este articulo, igual tambien te gustan los siguientes:</p>
                         <div class="row">
                             <?php
-                                $post_title = get_the_title();
+                                $post_title = get_post_field('post_title');
                                 $category = get_the_category()[0]->cat_ID;
 
                                 $posts1 = new WP_Query(array(
