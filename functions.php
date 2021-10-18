@@ -564,7 +564,7 @@ function get_stats_by_position($table, $data) {
 
   global $wpdb;
 
-  $headers_aux = $table->find('.stats-header', 0);
+  $headers_aux = $table->find('.header-row', 0);
   $headers = $headers_aux->find('td');
 
   $players = $table->find('.data-row');
