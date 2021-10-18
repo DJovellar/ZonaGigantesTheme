@@ -250,7 +250,7 @@ function save_all_videos() {
       $last_id = 0;
     }
 
-    $iframe = '<iframe src="https://www.youtube.com/embed/'.$result->items[$i]->id->videoId.'" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
+    $iframe = '<iframe loading="lazy" src="https://www.youtube.com/embed/'.$result->items[$i]->id->videoId.'" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
 
     $wpdb->insert('videos',
       array(
@@ -279,7 +279,7 @@ function save_new_videos() {
       $last_id = 0;
     }
 
-    $iframe = '<iframe src="https://www.youtube.com/embed/'.$result->items[$i]->id->videoId.'" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
+    $iframe = '<iframe loading="lazy" src="https://www.youtube.com/embed/'.$result->items[$i]->id->videoId.'" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
 
     $wpdb->insert('videos',
       array(
@@ -564,7 +564,7 @@ function get_stats_by_position($table, $data) {
 
   global $wpdb;
 
-  $headers_aux = $table->find('.stats-header', 0);
+  $headers_aux = $table->find('.header-row', 0);
   $headers = $headers_aux->find('td');
 
   $players = $table->find('.data-row');

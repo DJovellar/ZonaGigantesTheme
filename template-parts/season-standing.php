@@ -3,8 +3,9 @@
     $standing = $wpdb->get_results("SELECT * FROM `standing` ORDER BY `Percentage` DESC");
 ?>
 
-<h5 class="text-center">NFC East</h5>
+<h2 class="text-center" style="font-size: 1.3rem;">NFC East</h2>
 <hr>
+
 <table class="table table-borderless">
     <thead class="thead-dark font-title text-center">
     <tr>

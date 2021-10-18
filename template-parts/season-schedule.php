@@ -3,7 +3,7 @@
     $schedule = get_schedule();
 ?>
 
-<h5 class="text-center">Proximos partidos</h5>
+<h2 class="text-center" style="font-size: 1.3rem;">Calendario</h2>
 <hr>
 
 <div class="scrollable">
@@ -42,7 +42,7 @@
     <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
         <div class="modal-content bg-light" style="max-height: 947px;">
             <div class="modal-header justify-content-center">
-                <h2 class="modal-title" id="postModalLabel"><span class="Team_home"></span> vs <span class="Team_away"></span></h2>
+                <span class="modal-title font-title" id="postModalLabel" style="font-size: 2rem;"><span class="Team_home"></span> vs <span class="Team_away"></span></span>
             </div>
             <div class="modal-body pt-1">
                 <nav class="nav nav-pills flex-column flex-sm-row">
@@ -61,69 +61,69 @@
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-4 text-center font-text-stats-match TOTAL-NET-YARDS_home"></div>
-                                <div class="col-4 text-center font-text-stats-match font-weight-bold">Yardas totales</div>
-                                <div class="col-4 text-center font-text-stats-match TOTAL-NET-YARDS_away"></div>
+                                <div class="col-4 text-center font-text-stats-match TOTAL-NET-YARDS_home d-flex flex-column justify-content-center"></div>
+                                <div class="col-4 text-center font-text-stats-match font-weight-bold d-flex flex-column justify-content-center">Yardas totales</div>
+                                <div class="col-4 text-center font-text-stats-match TOTAL-NET-YARDS_away d-flex flex-column justify-content-center"></div>
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-4 text-center font-text-stats-match NET-YARDS-PASSING_home"></div>
-                                <div class="col-4 text-center font-text-stats-match font-weight-bold">Yardas de pase</div>
-                                <div class="col-4 text-center font-text-stats-match NET-YARDS-PASSING_away"></div>
+                                <div class="col-4 text-center font-text-stats-match NET-YARDS-PASSING_home d-flex flex-column justify-content-center"></div>
+                                <div class="col-4 text-center font-text-stats-match font-weight-bold d-flex flex-column justify-content-center">Yardas de pase</div>
+                                <div class="col-4 text-center font-text-stats-match NET-YARDS-PASSING_away d-flex flex-column justify-content-center"></div>
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-4 text-center font-text-stats-match NET-YARDS-RUSHING_home"></div>
-                                <div class="col-4 text-center font-text-stats-match font-weight-bold">Yardas de carrera</div>
-                                <div class="col-4 text-center font-text-stats-match NET-YARDS-RUSHING_away"></div>
+                                <div class="col-4 text-center font-text-stats-match NET-YARDS-RUSHING_home d-flex flex-column justify-content-center"></div>
+                                <div class="col-4 text-center font-text-stats-match font-weight-bold d-flex flex-column justify-content-center">Yardas de carrera</div>
+                                <div class="col-4 text-center font-text-stats-match NET-YARDS-RUSHING_away d-flex flex-column justify-content-center"></div>
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-4 text-center font-text-stats-match 1ST-DOWNS_home"></div>
-                                <div class="col-4 text-center font-text-stats-match font-weight-bold">1eros downs</div>
-                                <div class="col-4 text-center font-text-stats-match 1ST-DOWNS_away"></div>
+                                <div class="col-4 text-center font-text-stats-match 1ST-DOWNS_home d-flex flex-column justify-content-center"></div>
+                                <div class="col-4 text-center font-text-stats-match font-weight-bold d-flex flex-column justify-content-center">1eros downs</div>
+                                <div class="col-4 text-center font-text-stats-match 1ST-DOWNS_away d-flex flex-column justify-content-center"></div>
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-4 text-center font-text-stats-match 3RD-DOWN-CONV_home"></div>
-                                <div class="col-4 text-center font-text-stats-match font-weight-bold">3eros downs</div>
-                                <div class="col-4 text-center font-text-stats-match 3RD-DOWN-CONV_away"></div>
+                                <div class="col-4 text-center font-text-stats-match 3RD-DOWN-CONV_home d-flex flex-column justify-content-center"></div>
+                                <div class="col-4 text-center font-text-stats-match font-weight-bold d-flex flex-column justify-content-center">3eros downs</div>
+                                <div class="col-4 text-center font-text-stats-match 3RD-DOWN-CONV_away d-flex flex-column justify-content-center"></div>
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-4 text-center font-text-stats-match 4TH-DOWN-CONV_home"></div>
-                                <div class="col-4 text-center font-text-stats-match font-weight-bold">4tos downs</div>
-                                <div class="col-4 text-center font-text-stats-match 4TH-DOWN-CONV_away"></div>
+                                <div class="col-4 text-center font-text-stats-match 4TH-DOWN-CONV_home d-flex flex-column justify-content-center"></div>
+                                <div class="col-4 text-center font-text-stats-match font-weight-bold d-flex flex-column justify-content-center">4tos downs</div>
+                                <div class="col-4 text-center font-text-stats-match 4TH-DOWN-CONV_away d-flex flex-column justify-content-center"></div>
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-4 text-center font-text-stats-match TOUCHDOWNS_home"></div>
-                                <div class="col-4 text-center font-text-stats-match font-weight-bold">Touchdowns</div>
-                                <div class="col-4 text-center font-text-stats-match TOUCHDOWNS_away"></div>
+                                <div class="col-4 text-center font-text-stats-match TOUCHDOWNS_home d-flex flex-column justify-content-center"></div>
+                                <div class="col-4 text-center font-text-stats-match font-weight-bold d-flex flex-column justify-content-center">Touchdowns</div>
+                                <div class="col-4 text-center font-text-stats-match TOUCHDOWNS_away d-flex flex-column justify-content-center"></div>
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-4 text-center font-text-stats-match TURNOVERS_home"></div>
-                                <div class="col-4 text-center font-text-stats-match font-weight-bold">Turnovers</div>
-                                <div class="col-4 text-center font-text-stats-match TURNOVERS_away"></div>
+                                <div class="col-4 text-center font-text-stats-match TURNOVERS_home d-flex flex-column justify-content-center"></div>
+                                <div class="col-4 text-center font-text-stats-match font-weight-bold d-flex flex-column justify-content-center">Turnovers</div>
+                                <div class="col-4 text-center font-text-stats-match TURNOVERS_away d-flex flex-column justify-content-center"></div>
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-4 text-center font-text-stats-match RED-ZONE-EFF_home"></div>
-                                <div class="col-4 text-center font-text-stats-match font-weight-bold">Red zone</div>
-                                <div class="col-4 text-center font-text-stats-match RED-ZONE-EFF_away"></div>
+                                <div class="col-4 text-center font-text-stats-match RED-ZONE-EFF_home d-flex flex-column justify-content-center"></div>
+                                <div class="col-4 text-center font-text-stats-match font-weight-bold d-flex flex-column justify-content-center">Red zone</div>
+                                <div class="col-4 text-center font-text-stats-match RED-ZONE-EFF_away d-flex flex-column justify-content-center"></div>
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-4 text-center font-text-stats-match PENALTIES---YARDS_home"></div>
-                                <div class="col-4 text-center font-text-stats-match font-weight-bold">Penalizaciones - Yardas</div>
-                                <div class="col-4 text-center font-text-stats-match PENALTIES---YARDS_away"></div>
+                                <div class="col-4 text-center font-text-stats-match PENALTIES---YARDS_home d-flex flex-column justify-content-center"></div>
+                                <div class="col-4 text-center font-text-stats-match font-weight-bold d-flex flex-column justify-content-center">Penalizaciones - Yardas</div>
+                                <div class="col-4 text-center font-text-stats-match PENALTIES---YARDS_away d-flex flex-column justify-content-center"></div>
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-4 text-center font-text-stats-match TIME-OF-POS_home"></div>
-                                <div class="col-4 text-center font-text-stats-match font-weight-bold">Tiempo de posesión</div>
-                                <div class="col-4 text-center font-text-stats-match TIME-OF-POS_away"></div>
+                                <div class="col-4 text-center font-text-stats-match TIME-OF-POS_home d-flex flex-column justify-content-center"></div>
+                                <div class="col-4 text-center font-text-stats-match font-weight-bold d-flex flex-column justify-content-center">Tiempo de posesión</div>
+                                <div class="col-4 text-center font-text-stats-match TIME-OF-POS_away d-flex flex-column justify-content-center"></div>
                             </div>
                             <hr>
                         </div>
@@ -131,24 +131,24 @@
                     <div role="tabpanel" class="tab-pane fade" id="away">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-sm-12 pl-xl-5 pl-lg-5 text-center">
-                                <h5> Pase</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Pase</span>
                                 <table class="table table-players" id="passTable_away">
                                 </table>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-sm-12 pr-xl-5 pr-lg-5 text-center">
-                                <h5>Carrera</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Carrera</span>
                                 <table class="table table-players" id="rushTable_away">
                                 </table>
                             </div>
                         </div>
                         <div class="row pt-3">
                             <div class="col-xl-6 col-lg-6 col-sm-12 pl-xl-5 pl-lg-5 text-center">
-                                <h5>Recepciones</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Recepciones</span>
                                 <table class="table table-players" id="receivingTable_away">
                                 </table>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-sm-12 pr-xl-5 pr-lg-5 text-center">
-                                <h5>Defensa</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Defensa</span>
                                 <table class="table table-players" id="defenseTable_away">
                                 </table>
                             </div>
@@ -157,24 +157,24 @@
                     <div role="tabpanel" class="tab-pane fade" id="home">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-sm-12 pl-xl-5 pl-lg-5 text-center">
-                                <h5>Pase</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Pase</span>
                                 <table class="table table-players" id="passTable_home">
                                 </table>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-sm-12 pr-xl-5 pr-lg-5 text-center">
-                                <h5>Carrera</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Carrera</span>
                                 <table class="table table-players" id="rushTable_home">
                                 </table>
                             </div>
                         </div>
                         <div class="row pt-3">
                             <div class="col-xl-6 col-lg-6 col-sm-12 pl-xl-5 pl-lg-5 text-center">
-                                <h5>Recepciones</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Recepciones</span>
                                 <table class="table table-players" id="receivingTable_home">
                                 </table>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-sm-12 pr-xl-5 pr-lg-5 text-center">
-                                <h5>Defensa</h5>
+                                <span class="font-title" style="font-size: 1.3rem; display: inline-block; padding-bottom: 5px;">Defensa</span>
                                 <table class="table table-players" id="defenseTable_home">
                                 </table>
                             </div>
@@ -193,7 +193,7 @@
     <div class="modal-dialog modal modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header justify-content-center">
-                <h5 class="modal-title" id="postModalLabel">Info</h5>
+                <span class="modal-title font-title" style="font-size: 1.4rem;" id="postModalLabel">Info</span>
             </div>
             <div class="modal-body text-center">
                 <span>La información relacionada con este partido todavia no esta disponible, vuelve mas tarde.</span>
@@ -274,7 +274,7 @@
                     var container = $(".scrollable")[0];
                     var row = $("#table_schedule tbody tr")[position];
 
-                    container.scrollTop = row.offsetTop;
+                    container.scrollTop = row.offsetTop + 10;
                 }
             });
         }
