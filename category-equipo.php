@@ -250,6 +250,8 @@
             </div>
         </div>
     </div>
+
+
     <div class="row pt-4 no-gutters">
         <div class="col-4 d-flex justify-content-center">
             <div class="card" style="border: none;">
@@ -294,6 +296,8 @@
         </div>
     </div>
 </div>
+
+
 
 <?php get_footer()?>
 
