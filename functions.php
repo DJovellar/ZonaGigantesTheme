@@ -790,7 +790,7 @@ function get_current_week() {
   $result = $wpdb->get_results("SELECT `valor` FROM `params` WHERE `clave` LIKE 'currentWeek' ");
   $current_week = (int) $result[0]->valor;
 
-  echo json_encode($current_week);
+  echo json_encode($current_week - 1);
   die();
 }
 add_action('wp_ajax_get_current_week', 'get_current_week');
