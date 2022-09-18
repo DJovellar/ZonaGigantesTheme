@@ -56,7 +56,7 @@
             </div>
             <div class="row pt-3 pl-lg-5">
                 <div class="col-md-12 copy">
-                    <p class="text-center font-text">&copy; Copyright 2021 - Zona Gigantes.  All rights reserved.</p>
+                    <p class="text-center font-text">&copy; Copyright 2022 - Zona Gigantes.  All rights reserved.</p>
                 </div>
             </div>
         </div>

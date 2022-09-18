@@ -226,12 +226,12 @@
         <div class="col-6 d-flex justify-content-center">
             <div class="card" style="border: none;">
                 <div class="border-0 card-img-top">
-                    <img src="<?php bloginfo('template_url');?>/images/staff/Dave-Gettleman.png"
+                    <img src="<?php bloginfo('template_url');?>/images/staff/Joe-Schoen.png"
                             onerror="this.src='<?php bloginfo('template_url');?>/images/no-image.png'"
                             class="img-fluid" width="210" height="210">
                 </div>
                 <div class="card-body">
-                    <span class="card-title d-flex justify-content-center text-center font-weight-bold" style="font-size: 1.3rem;">Dave Gettleman</span>
+                    <span class="card-title d-flex justify-content-center text-center font-weight-bold" style="font-size: 1.3rem;">Joe Schoen</span>
                     <p class="card-text d-flex justify-content-center text-center">General Manager</p>
                 </div>
             </div>
@@ -239,12 +239,12 @@
         <div class="col-6 d-flex justify-content-center">
             <div class="card" style="border: none;">
                 <div class="border-0 card-img-top">
-                    <img src="<?php bloginfo('template_url');?>/images/staff/Joe-Judge.png"
+                    <img src="<?php bloginfo('template_url');?>/images/staff/Brian-Daboll.png"
                             onerror="this.src='<?php bloginfo('template_url');?>/images/no-image.png'"
                             class="img-fluid" width="230" height="230">
                 </div>
                 <div class="card-body">
-                    <span class="card-title d-flex justify-content-center text-center font-weight-bold" style="font-size: 1.3rem;">Joe Judge</span>
+                    <span class="card-title d-flex justify-content-center text-center font-weight-bold" style="font-size: 1.3rem;">Brian Daboll</span>
                     <p class="card-text d-flex justify-content-center text-center">Head Coach</p>
                 </div>
             </div>
@@ -256,12 +256,12 @@
         <div class="col-4 d-flex justify-content-center">
             <div class="card" style="border: none;">
                 <div class="border-0 card-img-top">
-                    <img src="<?php bloginfo('template_url');?>/images/staff/Jason-Garret.png"
+                    <img src="<?php bloginfo('template_url');?>/images/staff/Mike-Kafka.png"
                             onerror="this.src='<?php bloginfo('template_url');?>/images/no-image.png'"
                             class="img-fluid" width="210" height="210">
                 </div>
                 <div class="card-body">
-                    <span class="card-title d-flex justify-content-center text-center font-weight-bold" style="font-size: 1.3rem;">Jason Garret</span>
+                    <span class="card-title d-flex justify-content-center text-center font-weight-bold" style="font-size: 1.3rem;">Mike Kafka</span>
                     <p class="card-text d-flex justify-content-center text-center">Coordinador Ofensivo</p>
                 </div>
             </div>
@@ -269,12 +269,12 @@
         <div class="col-4 d-flex justify-content-center">
             <div class="card" style="border: none;">
                 <div class="border-0 card-img-top">
-                    <img src="<?php bloginfo('template_url');?>/images/staff/Patrick-Graham.png"
+                    <img src="<?php bloginfo('template_url');?>/images/staff/Don-Martindale.png"
                             onerror="this.src='<?php bloginfo('template_url');?>/images/no-image.png'"
                             class="img-fluid" width="210" height="210">
                 </div>
                 <div class="card-body">
-                    <span class="card-title d-flex justify-content-center text-center font-weight-bold" style="font-size: 1.3rem;">Patrick Graham</span>
+                    <span class="card-title d-flex justify-content-center text-center font-weight-bold" style="font-size: 1.3rem;">Don Martindale</span>
                     <p class="card-text d-flex justify-content-center text-center">Coordinador Defensivo</p>
                 </div>
             </div>

@@ -70,7 +70,7 @@ function update_standing_NFC_East() {
   global $wpdb;
   $wpdb->query("TRUNCATE TABLE standing");
 
-  $standings = call_stats_API("https://api.sportsdata.io/v3/nfl/scores/json/Standings/2021REG");
+  $standings = call_stats_API("https://api.sportsdata.io/v3/nfl/scores/json/Standings/2022REG");
 
   foreach($standings as $standing) {
 
@@ -93,7 +93,7 @@ function update_standing_NFC_East() {
       if ($standing->Team == 'WAS') {
         $wpdb->insert('standing',
           array(
-          'Name'=> 'Washington',
+          'Name'=> 'Commanders',
           'Division' => 'washington-icon2.png',
           'Win' => $standing->Wins,
           'Losses' => $standing->Losses,
@@ -164,7 +164,7 @@ function update_schedule_NYG() {
   $result = $wpdb->get_results("SELECT `valor` FROM `params` WHERE `clave` LIKE 'currentWeek' ");
   $current_week = $result[0]->valor;
 
-  $scores_week = call_stats_API("https://api.sportsdata.io/v3/nfl/scores/json/Scores/2021REG");
+  $scores_week = call_stats_API("https://api.sportsdata.io/v3/nfl/scores/json/Scores/2022REG");
 
   foreach($scores_week as $score_match) {
 
@@ -304,7 +304,7 @@ function get_last_videos() {
 function get_stats_season() {
   require_once('simple_html_dom.php');
 
-  $html = file_get_html('https://www.giants.com/team/stats/2021/REG');
+  $html = file_get_html('https://www.giants.com/team/stats/2022/REG');
   $tables = $html->find('.nfl-o-teamstats');
 
   foreach($tables as $table) {
@@ -617,9 +617,9 @@ function get_url_cbs($match) {
     }
 
     if ($date_aux2[1] == '01' || $date_aux2[1] == '02' || $date_aux2[1] == '03') {
-      $year = 'NFL_2022';
+      $year = 'NFL_2023';
     } else {
-      $year = 'NFL_2021';
+      $year = 'NFL_2022';
     }
 
     $date_formatted = $year.$date_aux2[1].$date_aux2[0].'_';
@@ -664,7 +664,7 @@ function find_shortcut($rival) {
     $shorcut = 'DEN';
   }
 
-  if ($rival == 'Washington') {
+  if ($rival == 'Commanders') {
     $shorcut = 'WAS';
   }
 
@@ -710,6 +710,42 @@ function find_shortcut($rival) {
 
   if ($rival == 'Browns') {
     $shorcut = 'CLE';
+  }
+
+  if ($rival == 'Titans') {
+    $shorcut = 'TEN';
+  }
+
+  if ($rival == 'Packers') {
+    $shorcut = 'GB';
+  }
+
+  if ($rival == 'Ravens') {
+    $shorcut = 'BAL';
+  }
+
+  if ($rival == 'Jaguars') {
+    $shorcut = 'JAC';
+  }
+
+  if ($rival == 'Seahawks') {
+    $shorcut = 'SEA';
+  }
+
+  if ($rival == 'Texans') {
+    $shorcut = 'HOU';
+  }
+
+  if ($rival == 'Lions') {
+    $shorcut = 'DET';
+  }
+
+  if ($rival == 'Vikings') {
+    $shorcut = 'MIN';
+  }
+
+  if ($rival == 'Colts') {
+    $shorcut = 'IND';
   }
 
   return $shorcut;

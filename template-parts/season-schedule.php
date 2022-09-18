@@ -214,7 +214,7 @@
         var week;
         $('.btnStats').on('click', function() {
             var index = $(this).closest('tr').index();
-            week = index + 2;
+            week = index + 1;
 
             var params = {
                 'action': 'get_stats_match_click',
