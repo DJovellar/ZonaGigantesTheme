@@ -214,7 +214,13 @@
         var week;
         $('.btnStats').on('click', function() {
             var index = $(this).closest('tr').index();
-            week = index + 1;
+
+            // Bye week
+            if (index < 8) {
+                week = index + 1;
+            } else {
+                week = index + 2
+            }
 
             var params = {
                 'action': 'get_stats_match_click',
